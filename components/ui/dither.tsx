@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree, ThreeEvent } from "@react-three/fiber";
 import { EffectComposer, wrapEffect } from "@react-three/postprocessing";
@@ -133,24 +132,29 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
 `;
 
 class RetroEffectImpl extends Effect {
-  public uniforms: Map<string, THREE.Uniform<any>>;
+  public uniforms: Map<string, THREE.Uniform<number>>;
+  
   constructor() {
-    const uniforms = new Map<string, THREE.Uniform<any>>([
+    const uniforms = new Map<string, THREE.Uniform<number>>([
       ["colorNum", new THREE.Uniform(4.0)],
       ["pixelSize", new THREE.Uniform(2.0)],
     ]);
     super("RetroEffect", ditherFragmentShader, { uniforms });
     this.uniforms = uniforms;
   }
+  
   set colorNum(value: number) {
     this.uniforms.get("colorNum")!.value = value;
   }
+  
   get colorNum(): number {
     return this.uniforms.get("colorNum")!.value;
   }
+  
   set pixelSize(value: number) {
     this.uniforms.get("pixelSize")!.value = value;
   }
+  
   get pixelSize(): number {
     return this.uniforms.get("pixelSize")!.value;
   }
@@ -172,7 +176,7 @@ const RetroEffect = forwardRef<
 RetroEffect.displayName = "RetroEffect";
 
 interface WaveUniforms {
-  [key: string]: THREE.Uniform<any>;
+  [key: string]: THREE.Uniform<number | THREE.Vector2 | THREE.Color>;
   time: THREE.Uniform<number>;
   resolution: THREE.Uniform<THREE.Vector2>;
   waveSpeed: THREE.Uniform<number>;
@@ -312,11 +316,19 @@ export default function Dither({
   enableMouseInteraction = true,
   mouseRadius = 1,
 }: DitherProps) {
+  // Get device pixel ratio safely on client side only
+  const getDpr = () => {
+    if (typeof window !== 'undefined') {
+      return window.devicePixelRatio || 1;
+    }
+    return 1; // Fallback for SSR
+  };
+
   return (
     <Canvas
       className="w-full h-full relative"
       camera={{ position: [0, 0, 6] }}
-      dpr={window.devicePixelRatio}
+      dpr={getDpr()}
       gl={{ antialias: true, preserveDrawingBuffer: true }}
     >
       <DitheredWaves

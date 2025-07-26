@@ -262,7 +262,7 @@ export default function FaultyTerminal({
   tint = "#ffffff",
   mouseReact = true,
   mouseStrength = 0.2,
-  dpr = Math.min(window.devicePixelRatio || 1, 2),
+  dpr = 2, // Default fallback instead of accessing window
   pageLoadAnimation = true,
   brightness = 1,
   className,
@@ -278,6 +278,14 @@ export default function FaultyTerminal({
   const rafRef = useRef<number>(0);
   const loadAnimationStartRef = useRef<number>(0);
   const timeOffsetRef = useRef<number>(Math.random() * 100);
+
+  // Get device pixel ratio safely on client side only
+  const actualDpr = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return Math.min(window.devicePixelRatio || 1, 2);
+    }
+    return dpr; // Use the provided dpr or default fallback
+  }, [dpr]);
 
   const tintVec = useMemo(() => hexToRgb(tint), [tint]);
 
@@ -299,7 +307,7 @@ export default function FaultyTerminal({
     const ctn = containerRef.current;
     if (!ctn) return;
 
-    const renderer = new Renderer({ dpr });
+    const renderer = new Renderer({ dpr: actualDpr });
     rendererRef.current = renderer;
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 1);
@@ -412,7 +420,7 @@ export default function FaultyTerminal({
       timeOffsetRef.current = Math.random() * 100;
     };
   }, [
-    dpr,
+    actualDpr,
     pause,
     timeScale,
     scale,
