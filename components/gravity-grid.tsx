@@ -48,26 +48,6 @@ const GravityGrid: React.FC<GravityGridProps> = ({
     };
   }, [squareSize, containerRef]);
 
-  const handleCellActivation = useCallback((row: number, col: number) => {
-    // Don't create new drops if there's already an active cell in this column
-    // const hasActiveInColumn = activeCells.some(cell => cell.col === col);
-    const hasActiveInColumn = false;
-
-    if (hasActiveInColumn) return;
-
-    const newId = generateId();
-    const newCell: ActiveCell = { row, col, id: newId };
-    
-    setActiveCells(prev => [...prev, newCell]);
-    
-    // Start the gravity animation immediately
-    startGravityAnimation(newCell);
-  }, [activeCells]);
-
-  const handleCellHover = useCallback((row: number, col: number) => {
-    handleCellActivation(row, col);
-  }, [handleCellActivation]);
-
   const startGravityAnimation = useCallback((cell: ActiveCell) => {
     let currentRow = cell.row;
     
@@ -90,6 +70,26 @@ const GravityGrid: React.FC<GravityGridProps> = ({
       }
     }, animationSpeed);
   }, [rows, animationSpeed]);
+
+  const handleCellActivation = useCallback((row: number, col: number) => {
+    // Don't create new drops if there's already an active cell in this column
+    // const hasActiveInColumn = activeCells.some(cell => cell.col === col);
+    const hasActiveInColumn = false;
+
+    if (hasActiveInColumn) return;
+
+    const newId = generateId();
+    const newCell: ActiveCell = { row, col, id: newId };
+    
+    setActiveCells(prev => [...prev, newCell]);
+    
+    // Start the gravity animation immediately
+    startGravityAnimation(newCell);
+  }, [startGravityAnimation]);
+
+  const handleCellHover = useCallback((row: number, col: number) => {
+    handleCellActivation(row, col);
+  }, [handleCellActivation]);
 
   const isCellActive = (row: number, col: number) => {
     return activeCells.some(cell => cell.row === row && cell.col === col);
@@ -125,8 +125,6 @@ const GravityGrid: React.FC<GravityGridProps> = ({
     
     return cells;
   };
-
-
 
   return (
     <div 

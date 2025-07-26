@@ -19,7 +19,7 @@ import LocationAndTimeDisplay from "@/components/location-indicator";
 import ResumeEmailButtons from "@/components/resume-email-btn";
 
 export default function HomePage() {
-  const [isOrange, setIsOrange] = useState(false);
+  const [isOrange] = useState(false);
 
 
   return (
