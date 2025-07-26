@@ -1,5 +1,6 @@
 import React from 'react';
 import { Separator } from "@/components/ui/separator";
+import Image from 'next/image';
 
 const TeamExperience = () => {
   const experiences = [
@@ -64,7 +65,7 @@ const TeamExperience = () => {
               <div className="flex items-center space-x-2">
                 {/* Company Logo */}
                 <div className={`w-7 h-7 rounded-sm flex items-center justify-center overflow-hidden ${exp.bgColor}`}>
-                  <img 
+                  <Image 
                     src={exp.logoSrc} 
                     alt={exp.logoAlt}
                     className="w-full h-full object-contain"

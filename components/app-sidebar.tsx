@@ -13,7 +13,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Home, User, Briefcase, Mail, FileText, AtSign, Paperclip, Linkedin, Github, ExternalLink, ChevronRight, CarFront, University, Car, File } from "lucide-react";
+import { AtSign, Paperclip, Linkedin, Github, ExternalLink, ChevronRight, CarFront, University, Car, File } from "lucide-react";
+import Link from "next/link";
 
 const navigationItems = [
   { id: 'dana', name: "Dana Inc.", href: "/dana", icon: CarFront },
@@ -49,7 +50,7 @@ export function AppSidebar() {
               
               className="group transition-all duration-300 ease-out"
             >
-              <a href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-12">
                   <div className="w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ease-out group-hover:shadow-lg" style={{ backgroundColor: '#372F32' }}>
                     <svg 
@@ -66,7 +67,7 @@ export function AppSidebar() {
                     Varun Ram
                   </span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

@@ -1,15 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Image from 'next/image';
 
-const SkillsSection = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [mounted, setMounted] = useState(false);
+// Define interfaces for type safety
+interface Skill {
+  name: string;
+  icon: string | null;
+}
+
+interface SkillsData {
+  languages: Skill[];
+  frameworks: Skill[];
+  technologies: Skill[];
+  manufacturing: Skill[];
+}
+
+interface SkillItemProps {
+  skill: Skill;
+  index: number;
+  isVisible: boolean;
+}
+
+interface SkillColumnProps {
+  title: string;
+  skills: Skill[];
+}
+
+const SkillsSection: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const skillsData = {
+  const skillsData: SkillsData = {
     languages: [
       { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
@@ -56,11 +81,11 @@ const SkillsSection = () => {
     ]
   };
 
-  const toggleExpanded = () => {
+  const toggleExpanded = (): void => {
     setIsExpanded(!isExpanded);
   };
 
-  const SkillItem = ({ skill, index, isVisible }) => (
+  const SkillItem: React.FC<SkillItemProps> = ({ skill, index, isVisible }) => (
     <div
       className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 ease-out transform ${
         mounted && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
@@ -71,9 +96,11 @@ const SkillsSection = () => {
       }}
     >
       {skill.icon ? (
-        <img
+        <Image
           src={skill.icon}
           alt={skill.name}
+          width={24}
+          height={24}
           className="w-6 h-6 object-contain flex-shrink-0 transition-transform duration-200 hover:scale-110"
         />
       ) : (
@@ -87,15 +114,15 @@ const SkillsSection = () => {
     </div>
   );
 
-  const SkillColumn = ({ title, skills }) => {
-    const displayedSkills = skills.slice(0, 5);
-    const hiddenSkills = skills.slice(5);
+  const SkillColumn: React.FC<SkillColumnProps> = ({ title, skills }) => {
+    const displayedSkills: Skill[] = skills.slice(0, 5);
+    const hiddenSkills: Skill[] = skills.slice(5);
 
     return (
       <div className="w-full">
         <h3 className="font-semibold mb-4 text-left transition-colors duration-300 hover:text-gray-300">{title}</h3>
         <div className="space-y-2">
-          {displayedSkills.map((skill, index) => (
+          {displayedSkills.map((skill: Skill, index: number) => (
             <SkillItem key={skill.name} skill={skill} index={index} isVisible={true} />
           ))}
 
@@ -108,7 +135,7 @@ const SkillsSection = () => {
               }}
             >
               <div className="space-y-2">
-                {hiddenSkills.map((skill, index) => (
+                {hiddenSkills.map((skill: Skill, index: number) => (
                   <SkillItem
                     key={skill.name}
                     skill={skill}
@@ -125,7 +152,6 @@ const SkillsSection = () => {
   };
 
   return (
-    // Add the hidden and lg:block classes to hide on mobile/tablet and show on large screens
     <div className="hidden lg:block w-full">
       <div className="mb-8">
         <h2 className="pt-4 text-muted-foreground text-xs font-small mb-4 tracking-wide transition-all duration-300 hover:tracking-wider">
