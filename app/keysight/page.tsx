@@ -26,6 +26,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+import { ExternalLinkCard } from "@/components/link-preview";
+
 export default function BlogCaseStudyPage() {
   return (
     <SidebarProvider>
@@ -64,7 +66,7 @@ export default function BlogCaseStudyPage() {
               {/* Background Video */}
               <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
                 <Dither
-                  waveColor={[0.5, 0.5, 0.5]}
+                  waveColor={[0.25, 0.2, 0.2]}
                   disableAnimation={false}
                   enableMouseInteraction={true}
                   mouseRadius={0.3}
@@ -89,49 +91,50 @@ export default function BlogCaseStudyPage() {
               {/* Left Column - Title and Description */}
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h1 className="text-5xl lg:text-6xl font-bold tracking-tight ">
+                  <h1 className="text-5xl lg:text-6xl font-bold tracking-tight">
                     Keysight
                   </h1>
                 </div>
                 
-                <p className="text-xl lg:text-2xl leading-relaxed">
+                <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
                   Created a two-part web security device that allows homeowners to track movement in and out of their household using facial and voice recognition               
                 </p>
 
                 {/* Meta Information */}
-                <div className="flex flex-wrap items-center gap-6 text-{#E3DEE0}">
+                <div className="flex flex-wrap items-center gap-6 text-gray-300">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
-                    <span>April 2024</span>
+                    <span className="text-base">April 2024</span>
                   </div>
                 </div>
               </div>
 
               {/* Right Column - Details */}
-              <div className="space-y-2">
+              <div className="space-y-4">
                 
                 {/* Industry */}
                 <div>
-                  <Badge variant="default" className="text-white">
+                  <Badge variant="default" className="text-white bg-white/20 hover:bg-white/30">
                     Hackathon
                   </Badge>
                 </div>
 
                 {/* Separator */}
-                <div className="h-px bg-gradient-to-r from-[#B4A7AC]/30 to-transparent"></div>
+                <div className="h-px bg-gradient-to-r from-white/30 to-transparent"></div>
 
                 {/* Role */}
-                <div className="text-[#E3DEE0]">
-                  <span className="font-semibold text-white">Role:</span> Full-Stack Developer
+                <div className="text-gray-300">
+                  <span className="font-semibold text-white text-base">Role:</span>
+                  <span className="text-base ml-2">Full-Stack Developer</span>
                 </div>
 
                 {/* Separator */}
-                <div className="h-px bg-gradient-to-r from-[#E3DEE0]/30 to-transparent"></div>
+                <div className="h-px bg-gradient-to-r from-white/30 to-transparent"></div>
 
                 {/* Contributors */}
                 <TooltipProvider>
                   <div className="flex items-center gap-3">
-                    <span className="text-white font-semibold">Contributors:</span>
+                    <span className="text-white font-semibold text-base">Contributors:</span>
                     <div className="flex -space-x-2">
                       <Tooltip>
                         <TooltipTrigger asChild>
@@ -145,8 +148,8 @@ export default function BlogCaseStudyPage() {
                             </Avatar>
                           </button>
                         </TooltipTrigger>
-                        <TooltipContent className='text-white'>
-                          <p>Varun Kothandaraman</p>
+                        <TooltipContent className="text-white">
+                          <p className="text-sm">Varun Kothandaraman</p>
                         </TooltipContent>
                       </Tooltip>
                       <Tooltip>
@@ -161,8 +164,8 @@ export default function BlogCaseStudyPage() {
                             </Avatar>
                           </button>
                         </TooltipTrigger>
-                        <TooltipContent className='text-white'>
-                          <p>Hady Ibrahim</p>
+                        <TooltipContent className="text-white">
+                          <p className="text-sm">Hady Ibrahim</p>
                         </TooltipContent>
                       </Tooltip>
                       <Tooltip>
@@ -177,8 +180,8 @@ export default function BlogCaseStudyPage() {
                             </Avatar>
                           </button>
                         </TooltipTrigger>
-                        <TooltipContent className='text-white'>
-                          <p>Himanshu Singh</p>
+                        <TooltipContent className="text-white">
+                          <p className="text-sm">Himanshu Singh</p>
                         </TooltipContent>
                       </Tooltip>
                     </div>
@@ -186,14 +189,28 @@ export default function BlogCaseStudyPage() {
                 </TooltipProvider>
 
                 {/* Separator */}
-                <div className="h-px bg-gradient-to-r from-[#B4A7AC]/30 to-transparent"></div>
+                <div className="h-px bg-gradient-to-r from-white/30 to-transparent"></div>
 
                 {/* Key Focus Areas */}
-                <div className="space-y-1">
-                  <span className="text-white font-semibold block">Key Focus Areas:</span>
-                  <p className="text-[#E3DEE0] leading-relaxed">
+                <div className="space-y-2">
+                  <span className="text-white font-semibold text-base block">Key Focus Areas:</span>
+                  <p className="text-gray-300 text-base leading-relaxed">
                     Home Security • Facial Recognition • Voice Recognition • Web Development • Real-Time Notifications • Firebase Integration • gRPC Communication • Raspberry Pi Hardware Control • UI/UX Design (Figma) • React Application
                   </p>
+                </div>
+
+                {/* External Links */}
+                <div className="space-y-3 pt-2">
+                  <ExternalLinkCard 
+                    title="Devpost" 
+                    description="See our winning Devpost project!" 
+                    url="https://devpost.com/software/keysight"
+                  />
+                  <ExternalLinkCard 
+                    title="GitHub" 
+                    description="Check out the Keysight GitHub repository." 
+                    url="https://github.com/itshady/keysight"
+                  />
                 </div>
               </div>
             </div>
@@ -202,184 +219,153 @@ export default function BlogCaseStudyPage() {
 
         {/* Main content section with background color */}
         <div className="bg-[#131110] text-white">
-          <div className="p-6 lg:p-13 max-w-4xl mx-auto">
-            <article className="space-y-8">
-
-
-              {/* Introduction Section */}
-              <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Introduction</h2>
+          <div className="p-6 lg:p-12 max-w-4xl mx-auto">
+            <article className="space-y-12">
+              
+              {/* Problem Statement Section */}
+              <section className="space-y-6">
+                <h2 className="text-3xl font-bold text-white">Problem Statement</h2>
+                
+                <div className="w-full">
+                  <div className="w-full max-w-4xl mx-auto">
+                    <iframe
+                      className="w-full h-64 md:h-96 lg:h-[500px] rounded-lg shadow-lg"
+                      src="https://www.youtube.com/embed/xM34Z3SKnq0"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Whether you are at work or at home, the nagging worry of "who's at home?" fades away but it is hard to truly understand what is going on where you relax. Research labs, punch-in machines, and traditional home cameras not only are slow to use but provide limited data as to who is moving in and out of your house.
                 </p>
               </section>
-              
-              <section className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Cooling Efficiency</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+25%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Improvement over baseline</p>
-                    </CardContent>
-                  </Card>
 
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Battery Life</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+18%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Extended operational life</p>
-                    </CardContent>
-                  </Card>
+              {/* My Role Section */}
+              <section className="space-y-6">
+                <h2 className="text-3xl font-bold text-white">My Role</h2>
+                <ul className="space-y-3 text-lg text-gray-300 leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-white mt-2">•</span>
+                    <span>Created the UI design for desktop and mobile mockups in Figma</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-white mt-2">•</span>
+                    <span>Connected the frontend React app to the Firebase backend</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-white mt-2">•</span>
+                    <span>Integrated communication to a Raspberry Pi via gRPC</span>
+                  </li>
+                </ul>
+              </section>
 
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Energy Consumption</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">-12%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Reduced cooling energy</p>
-                    </CardContent>
-                  </Card>
+              {/* Outcome Section */}
+              <section className="space-y-6">
+                <h2 className="text-3xl font-bold text-white">Outcome</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Keysight is a two-part web security system that allows homeowners to monitor and track movement in and out of their household. Utilizing facial recognition and voice detection, Keysight is able to quickly identify whitelisted individuals as well as send notifications alerting of any guests or deliveries. Whenever there is any abnormal activity or threats, everyone in your house will be notified safely and remotely.
+                </p>
+                
+                <div className="flex justify-center pt-4">
+                  <Image
+                    src="/keysight/keysight-dashboard.jpg"
+                    height={900}
+                    width={900}
+                    alt="Keysight Dashboard"
+                    unoptimized
+                    className="rounded-lg object-cover shadow-lg"
+                  />
                 </div>
               </section>
 
-
-              <AspectRatio ratio={16 / 9}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="https://cdn.motor1.com/images/mgl/BXxr9A/s3/il-prototipo-camuffato-della-nuova-jaguar-elettrica-2024.jpg"
-                  alt="Image"
-                  unoptimized
-                  className="rounded-md object-cover"
-                  fill
-                />
-              </div>
-            </AspectRatio>
-
-            <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Challenges</h2>
+              {/* Final Web Application Section */}
+              <section className="space-y-6">
+                <h2 className="text-3xl font-bold text-white">Final Web Application Mockup</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                  Keysight was built using a combination of React, Firebase, and Chakra UI through UI/UX designs created in Figma. Firebase was utilized as the database to document and log user information that was initialized through Google authentication. We chose React as our main framework due to its ability for hot refresh alongside Firebase.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Our design consists of a main dashboard that showcases all main information alongside a settings tab that allows for group creation through email invites.
                 </p>
+                
+                <div className="pt-4">
+                  <Carousel className="p-1">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="flex items-center justify-center">
+                          <Image
+                            src="/keysight/keysight-login.jpg"
+                            alt="Keysight Login Screen"
+                            height={900}
+                            width={900}
+                            className="rounded-lg object-contain max-h-full shadow-lg"
+                            unoptimized
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="flex items-center justify-center">
+                          <Image
+                            src="/keysight/keysight-dashboard.jpg"
+                            alt="Keysight Dashboard"
+                            height={900}
+                            width={900}
+                            className="rounded-lg object-contain max-h-full shadow-lg"
+                            unoptimized
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="flex items-center justify-center">
+                          <Image
+                            src="/keysight/keysight-facial.jpg"
+                            alt="Keysight Facial Recognition"
+                            height={900}
+                            width={900}
+                            className="rounded-lg object-contain max-h-full shadow-lg"
+                            unoptimized
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="flex items-center justify-center">
+                          <Image
+                            src="/keysight/keysight-settings.jpg"
+                            alt="Keysight Settings"
+                            height={950}
+                            width={950}
+                            className="rounded-lg object-contain max-h-full shadow-lg"
+                            unoptimized
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="flex items-center justify-center">
+                          <Image
+                            src="/keysight/keysight-grpc-lock.jpg"
+                            alt="Keysight gRPC Lock Interface"
+                            height={300}
+                            width={300}
+                            className="rounded-lg object-contain max-h-full shadow-lg"
+                            unoptimized
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
               </section>
-
-              <div className="flex gap-4">
-                <AspectRatio ratio={4 / 3} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://i.guim.co.uk/img/media/0e123a1c4f010f2868c2357da8df3f0cd5dc5393/0_72_2161_1297/master/2161.jpg?width=465&dpr=1&s=none&crop=none"
-                      alt="Jaguar"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-
-                <AspectRatio ratio={16 / 9} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://media.wired.com/photos/674874547f9330001e85096a/3:2/w_2560%2Cc_limit/JagTopArt2.jpg"
-                      alt="Another Car"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-              </div>
-
-            <section className="space-y-4">
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-            <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 10000,
-              //   }),
-              // ]}
-            className="p-1">
-              <CarouselContent>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://skinnonews.com/global/wp-content/uploads/sites/2/2022/07/1180px_3.jpg"
-                      alt="Slide 2"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://media.wired.com/photos/655692cf7a953ed215c7b1d8/master/pass/Ford-F-150-Lightning-Featured-Gear.jpg"
-                      alt="Slide 1"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://images.mktw.net/im-47931009?width=1260&height=840"
-                      alt="Slide 3"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             </article>
           </div>
         </div>
+        
         <Footer />
       </main>
     </SidebarProvider>

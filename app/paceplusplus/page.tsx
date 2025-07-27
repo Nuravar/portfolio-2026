@@ -11,14 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image";
 import FaultyTerminal from '@/components/ui/terminal';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
+import { ExternalLinkCard } from "@/components/link-preview";
 import {
   Tooltip,
   TooltipContent,
@@ -116,7 +109,7 @@ export default function BlogCaseStudyPage() {
                 <div className="flex flex-wrap items-center gap-6 text-{#E3DEE0}">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
-                    <span>April 2024</span>
+                    <span>Jan 2024</span>
                   </div>
                 </div>
               </div>
@@ -178,188 +171,327 @@ export default function BlogCaseStudyPage() {
                       Python GUI Development • MATLAB Simulink • Serial Communication • Data Encryption • Real-Time Data Visualization • STM32 Programming • Tkinter Interface Design • Hardware Integration • User Authentication • GitHub Version Control
                   </p>
                 </div>
+                <ExternalLinkCard 
+                  title="GitHub Repository" 
+                  description="Explore the complete Pace++ codebase" 
+                  url="https://github.com/PacePlusPlus/PacePlusPlus"
+                />
               </div>
             </div>
           </div>
         </div>
 
         {/* Main content section with background color */}
-        <div className="bg-[#131110] text-white">
-          <div className="p-6 lg:p-13 max-w-4xl mx-auto">
-            <article className="space-y-8">
-
-
-              {/* Introduction Section */}
-              <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Introduction</h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-              
-              <section className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Cooling Efficiency</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+25%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Improvement over baseline</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Battery Life</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+18%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Extended operational life</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Energy Consumption</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">-12%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Reduced cooling energy</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </section>
-
-
-              <AspectRatio ratio={16 / 9}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="https://cdn.motor1.com/images/mgl/BXxr9A/s3/il-prototipo-camuffato-della-nuova-jaguar-elettrica-2024.jpg"
-                  alt="Image"
-                  unoptimized
-                  className="rounded-md object-cover"
-                  fill
-                />
-              </div>
-            </AspectRatio>
-
-            <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Challenges</h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-              <div className="flex gap-4">
-                <AspectRatio ratio={4 / 3} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://i.guim.co.uk/img/media/0e123a1c4f010f2868c2357da8df3f0cd5dc5393/0_72_2161_1297/master/2161.jpg?width=465&dpr=1&s=none&crop=none"
-                      alt="Jaguar"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-
-                <AspectRatio ratio={16 / 9} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://media.wired.com/photos/674874547f9330001e85096a/3:2/w_2560%2Cc_limit/JagTopArt2.jpg"
-                      alt="Another Car"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-              </div>
-
-            <section className="space-y-4">
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-            <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 10000,
-              //   }),
-              // ]}
-            className="p-1">
-              <CarouselContent>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://skinnonews.com/global/wp-content/uploads/sites/2/2022/07/1180px_3.jpg"
-                      alt="Slide 2"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://media.wired.com/photos/655692cf7a953ed215c7b1d8/master/pass/Ford-F-150-Lightning-Featured-Gear.jpg"
-                      alt="Slide 1"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://images.mktw.net/im-47931009?width=1260&height=840"
-                      alt="Slide 3"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </article>
-          </div>
+        {/* Main content section with background color */}
+<div className="bg-[#131110] text-white">
+  <div className="p-6 lg:p-12 max-w-4xl mx-auto">
+    <article className="space-y-12">
+      
+      {/* Introduction Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Project Overview</h2>
+        
+        <div className="flex justify-center pb-6">
+          <Image
+            src="/pace-plus-plus/overview-image.png"
+            height={600}
+            width={800}
+            alt="Pace++ Pacemaker Interface Overview"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
         </div>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          We developed a pacemaker prototype that covers all of the main features of pacemaker software today defined by Boston Scientific. <strong className="text-white">Pace++</strong> is a simulated pacemaker built to visually and functionally represent the various functions of modern pacemakers today. The following project is based on Boston Scientific's pacemaker specifications alongside implementing 8 of their defined pacemaker pacing modes, a real time electrocardiogram display, and local encrypted user data storage.
+        </p>
+      </section>
+
+      {/* My Role Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">My Role</h2>
+        <ul className="space-y-3 text-lg text-gray-300 leading-relaxed">
+          <li className="flex items-start gap-3">
+            <span className="text-white mt-2">•</span>
+            <span>Created the desktop graphical user interface for all frontend interactions</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white mt-2">•</span>
+            <span>Utilized MATLAB Simulink to create the serial communication between the desktop and the K64F board</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white mt-2">•</span>
+            <span>Developed the backend for displaying user data, simulated pacing data, and storing user information</span>
+          </li>
+        </ul>
+      </section>
+
+      {/* Technical Architecture Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Python Communicates with STM32 Board via Simulink</h2>
+        
+        <div className="flex justify-center pb-6">
+          <Image
+            src="/pace-plus-plus/architecture-diagram.png"
+            height={500}
+            width={700}
+            alt="Pace++ System Architecture"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          <strong className="text-white">Pace++</strong> is a simulated pacemaker designed with Python and MATLAB Simulink. The front-end of the project was designed and developed by me, with the purpose of being the connection between the Simulink-based STM32 board and the Python front-end that controls the board.
+        </p>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Our pacemaker design utilized a board that simulated the heart's electrical pulses. Through this board, <strong className="text-white">we created 8 unique modes</strong> to pace different aspects and conditions of heart disease. These modes pace the atrium or ventricle at either fixed rates, uneven intervals, or during physical activity through the in-built accelerometer. The Python script then displays the electrical signals real-time to a doctor using the software, allowing them to make fine adjustments per each individual patient.
+        </p>
+      </section>
+
+      {/* Features Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Real-time Display, Data Encryption, Serial Communication, and User Authentication</h2>
+        
+        <div className="flex justify-center pb-6">
+          <Image
+            src="/pace-plus-plus/login-interface.png"
+            height={500}
+            width={700}
+            alt="Pace++ Login Interface"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Through Python's tkinter, we created a secure interface that allows for the modification of the pacemaker. The login screen utilizes a dictionary to separate user data involving both login and pacemaker parameters, collects information on the current board serial number, and collects information on login times.
+        </p>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">Features of the GUI</h3>
+          <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Real-time display of simulated heartbeat</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Patient data to be saved and modified</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Encryption of patient data</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Serial communication to the K64F board</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Dark and light modes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">Features of the Simulink</h3>
+          <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Simulated electrical pacing</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Hardware separation</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Distinct pacing modes</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white mt-2">•</span>
+              <span>Rate Adaptive Pacing</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Main Dashboard Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Creating a Distinct Main Dashboard</h2>
+        
+        <div className="flex justify-center pb-6">
+          <Image
+            src="/pace-plus-plus/main-dashboard.png"
+            height={600}
+            width={800}
+            alt="Pace++ Main Dashboard"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          After logging-in, the "doctor" is given a screen that displays most of the important information first, such as three graphs showcasing the electrocardiograph reading. The pacemaker GUI also allows the doctor to start, stop, and change the pacemaker options — where each of these options directly send a packet to the board to perform their specific task.
+        </p>
+
+        <div className="flex justify-center pt-4">
+          <Image
+            src="/pace-plus-plus/code-structure.png"
+            height={600}
+            width={800}
+            alt="Pace++ Code Structure Overview"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+        
+        <p className="text-lg text-gray-300 leading-relaxed pt-4">
+          Additionally, I created a high-level overview for the general code structure to maintain clean architecture and ensure seamless communication between components.
+        </p>
+      </section>
+
+      {/* Simulink Backend Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Creating the Simulink Backend</h2>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          For the backend, we utilized MATLAB Simulink to not only take in the simulated heart pacing data but also to perform actions upon it using the parameters the doctor chooses to set in the options menu. In our workflow, there are a couple of major parts:
+        </p>
+
+        <ol className="space-y-3 text-lg text-gray-300 leading-relaxed">
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">1.</span>
+            <span>We take in the simulated heart signals and parameter data sent over from the Python GUI. If no parameter data is sent over, then it defaults to values specified in Boston Scientific's specification sheet.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">2.</span>
+            <span>Through the accelerometer, we calculate the derivative of motion to determine if the user's activity is increasing or decreasing. Since your heart beats faster as you exercise, it is important to account for making the pacemaker pulse faster.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">3.</span>
+            <span>Utilizing the input parameters, we can calculate certain formulas to define specific heart behaviors and through 8 unique pacing modes these parameters are used to pace the simulated heart.</span>
+          </li>
+        </ol>
+
+        <div className="space-y-6 pt-6">
+          <div className="flex justify-center">
+            <Image
+              src="/pace-plus-plus/simulink-stateflow.png"
+              height={600}
+              width={800}
+              alt="General Overview of Simulink State-flow"
+              unoptimized
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
+          <p className="text-center text-base text-gray-400 italic">General overview of the Simulink state-flow</p>
+        </div>
+
+        <div className="space-y-6 pt-6">
+          <div className="flex justify-center">
+            <Image
+              src="/pace-plus-plus/parameter-processing.png"
+              height={600}
+              width={800}
+              alt="Overview of Parameter Processing"
+              unoptimized
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
+          <p className="text-center text-base text-gray-400 italic">Overview of parameter processing</p>
+        </div>
+      </section>
+
+      {/* Pacing Modes Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Pacing Modes</h2>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          In our pacemaker we have 8 different modes that perform certain functions:
+        </p>
+
+        <ol className="space-y-2 text-lg text-gray-300 leading-relaxed">
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">1.</span>
+            <span>AOO, fixed pacing of the atrium</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">2.</span>
+            <span>VOO, fixed pacing of the ventricle</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">3.</span>
+            <span>AAI, irregular pacing of the atrium</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">4.</span>
+            <span>VVI, irregular pacing of the ventricle</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-white font-semibold">5.</span>
+            <span>Rate adaptive modes for each of the modes above</span>
+          </li>
+        </ol>
+
+        <div className="flex justify-center pt-6">
+          <Image
+            src="/pace-plus-plus/pacing-modes.png"
+            height={600}
+            width={800}
+            alt="Overview of Pacemaker Pacing Modes"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+        <p className="text-center text-base text-gray-400 italic">Overview of pacemaker pacing modes</p>
+      </section>
+
+      {/* Validation Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-white">Validation</h2>
+        
+        <p className="text-lg text-gray-300 leading-relaxed">
+          The following were the parameters that were implemented in the device:
+        </p>
+
+        <div className="flex justify-center pb-6">
+          <Image
+            src="/pace-plus-plus/parameters-table.png"
+            height={600}
+            width={800}
+            alt="Implemented Pacemaker Parameters"
+            unoptimized
+            className="rounded-lg object-cover shadow-lg"
+          />
+        </div>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          To test and validate our pacemaker mode function, we employed Heartview, a McMaster created cardiac simulation tool that was pre-flashed onto our board.
+        </p>
+
+        <div className="space-y-6 pt-6">
+          <div className="flex justify-center">
+            <Image
+              src="/pace-plus-plus/heartview-output.png"
+              height={600}
+              width={800}
+              alt="Heartview Output Showing Simulated Pacing"
+              unoptimized
+              className="rounded-lg object-cover shadow-lg"
+            />
+          </div>
+          <p className="text-center text-base text-gray-400 italic">Same output from Heartview, showing our simulated pacing for the simulation</p>
+        </div>
+      </section>
+
+
+
+    </article>
+  </div>
+</div>
         <Footer />
       </main>
     </SidebarProvider>

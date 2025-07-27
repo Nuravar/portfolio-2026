@@ -11,6 +11,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image";
 import FaultyTerminal from '@/components/ui/terminal';
+import { ExternalLinkCard } from "@/components/link-preview";
+
 import {
   Carousel,
   CarouselContent,
@@ -109,14 +111,13 @@ export default function BlogCaseStudyPage() {
                 </div>
                 
                 <p className="text-xl lg:text-2xl leading-relaxed">
-                  A comprehensive pacemaker simulation system featuring 8 pacing modes, real-time ECG monitoring, and secure patient data management with MATLAB Simulink integration
-                </p>
-
+                  Slacker is a <span className="underline">hackathon-winning</span> web app that automatically assigns and tracks household chores among roommates for fair task distribution.
+                  </p>
                 {/* Meta Information */}
                 <div className="flex flex-wrap items-center gap-6 text-{#E3DEE0}">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
-                    <span>April 2024</span>
+                    <span>Jan 2023</span>
                   </div>
                 </div>
               </div>
@@ -163,6 +164,39 @@ export default function BlogCaseStudyPage() {
                           <p>Varun Kothandaraman</p>
                         </TooltipContent>
                       </Tooltip>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <button 
+                            onClick={() => window.open('https://www.linkedin.com/in/hady-ibrahim/', '_blank')}
+                            className="transition-transform hover:scale-110 hover:z-10 relative cursor-pointer"
+                          >
+                            <Avatar className="w-8 h-8 border-2 border-white">
+                              <AvatarImage src="" />
+                              <AvatarFallback className="text-white text-xs">HI</AvatarFallback>
+                            </Avatar>
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent className='text-white'>
+                          <p>Hady Ibrahim</p>
+                        </TooltipContent>
+                      </Tooltip>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <button 
+                            onClick={() => window.open('https://www.linkedin.com/in/albertlai631/', '_blank')}
+                            className="transition-transform hover:scale-110 hover:z-10 relative cursor-pointer"
+                          >
+                            <Avatar className="w-8 h-8 border-2 border-white">
+                              <AvatarImage src="" />
+                              <AvatarFallback className="text-white text-xs">AL</AvatarFallback>
+                            </Avatar>
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent className='text-white'>
+                          <p>Albert Lai</p>
+                        </TooltipContent>
+                      </Tooltip>
+                      
                      
                     </div>
                   </div>
@@ -175,9 +209,16 @@ export default function BlogCaseStudyPage() {
                 <div className="space-y-1">
                   <span className="text-white font-semibold block">Key Focus Areas:</span>
                   <p className="text-[#E3DEE0] leading-relaxed">
-                      Python GUI Development • MATLAB Simulink • Serial Communication • Data Encryption • Real-Time Data Visualization • STM32 Programming • Tkinter Interface Design • Hardware Integration • User Authentication • GitHub Version Control
-                  </p>
+                      JavaScript • React • HTML • CSS • Firebase • Chakra UI • Figma • UI/UX Design • Google Authentication • GitHub • Mobile Mockup Design • Responsive Web Design</p>
                 </div>
+                 <ExternalLinkCard 
+                  title="Devpost" 
+                  description="See our winning Devpost project!" 
+                  url="https://devpost.com/software/slacker-u25lpj"/>
+                <ExternalLinkCard 
+                  title="GitHub" 
+                  description="Check out the slacker chores github page." 
+                  url="https://github.com/hackdays-projects/slacker-chore"/>
               </div>
             </div>
           </div>
@@ -187,157 +228,272 @@ export default function BlogCaseStudyPage() {
         <div className="bg-[#131110] text-white">
           <div className="p-6 lg:p-13 max-w-4xl mx-auto">
             <article className="space-y-8">
-
-
               {/* Introduction Section */}
               <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Introduction</h2>
+                
+                <h2 className="text-3xl font-bold text-white">Problem Statement</h2>
+                <div className=" w-full h-full">
+                    <Image
+                      src="/slacker/slacker-banner-2.png"
+                      alt="Image"
+                      unoptimized
+                      className="rounded-md object-cover"
+                      height={200}
+                      width={800}
+                    />
+                  </div>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
+                  Shared housing often presents a challenge when it comes to organizing chores and ensuring everyone contributes equally. Without clear instructions, many students struggle to maintain a proper work-life balance and may forget their assigned chores.                </p>
               </section>
-              
+                {/* Stat Card Section */}
               <section className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card>
+                <Card className="border-amber-200 ">
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Cooling Efficiency</CardTitle>
+                      <CardTitle className="text-sm font-medium text-center">Placed</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+25%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Improvement over baseline</p>
+                      <div className="text-5xl font-extrabold">1st</div>
+                      <p className="text-xs text-muted-foreground">in productivity apps</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center">Created in a total of</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-5xl font-extrabold">12 hrs</div>
+                      <p className="text-xs text-muted-foreground mt-1">during the hackathon</p>
                     </CardContent>
                   </Card>
 
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Battery Life</CardTitle>
+                      <CardTitle className="text-sm font-medium text-center">Built with</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+18%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Extended operational life</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Energy Consumption</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">-12%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Reduced cooling energy</p>
+                      <div className="text-5xl font-extrabold">6</div>
+                      <p className="text-xs text-muted-foreground mt-1">different technologies</p>
                     </CardContent>
                   </Card>
                 </div>
               </section>
+              
+              <section className="max-w-4xl mx-auto space-y-8">
+                {/* Solution */}
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold text-white">Solution</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Slacker is a web-app designed to streamline household chores for users. By joining a household group, members access a comprehensive task list, and the app automatically assigns tasks to each member within the group. This ensures a more organized and efficient distribution of responsibilities.
+                  </p>
+                </div>
 
+                {/* My Role */}
+                <div className="space-y-4">
+                  <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">My Role</h2>
+                  <ul className="leading-relaxed my-6 ml-6 list-disc [&>li]:mt-2">
+                    <li>
+                      Created the UI design for desktop and mobile mockups in Figma
+                    </li>
+                    <li>
+                      Created the desktop landing page and a variety of subpage layouts
+                    </li>
+                    <li>
+                      Bug-tested the final react-app
+                    </li>
+                  </ul>
+                </div>
 
-              <AspectRatio ratio={16 / 9}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="https://cdn.motor1.com/images/mgl/BXxr9A/s3/il-prototipo-camuffato-della-nuova-jaguar-elettrica-2024.jpg"
-                  alt="Image"
-                  unoptimized
-                  className="rounded-md object-cover"
-                  fill
-                />
-              </div>
-            </AspectRatio>
-
-            <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Challenges</h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-              <div className="flex gap-4">
-                <AspectRatio ratio={4 / 3} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://i.guim.co.uk/img/media/0e123a1c4f010f2868c2357da8df3f0cd5dc5393/0_72_2161_1297/master/2161.jpg?width=465&dpr=1&s=none&crop=none"
-                      alt="Jaguar"
+                {/* Outcome */}
+                <div className="space-y-4">
+                  <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">Outcome</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    My two roommates and I <strong>won the "best productivity app"</strong> category at the Deltahacks hackathon, earning us an espresso machine as a prize. We are excited about our success and are now determined to develop the full version of our app, with plans to publish it on mobile app stores in the near future.
+                  </p>
+                </div>
+                  <div className="flex justify-center">
+                      <Image
+                      src="/slacker/slacker-devpost.png"
+                      height={600}
+                      width={350}
+                      alt="Image"
                       unoptimized
-                      fill
                       className="rounded-md object-cover"
                     />
                   </div>
-                </AspectRatio>
+              </section>
 
-                <AspectRatio ratio={16 / 9} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://media.wired.com/photos/674874547f9330001e85096a/3:2/w_2560%2Cc_limit/JagTopArt2.jpg"
-                      alt="Another Car"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-              </div>
+              <section className="max-w-4xl mx-auto space-y-8">
+                 <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">Mobile Mockup</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    We began by designing the mobile mockup first, since our initial goal was to build the app using React Native. Starting with the mobile view allowed us to focus on essential content and user flows in a constrained space. This approach also made it easier to scale the design up for desktop later, rather than trying to compress a desktop layout into a smaller screen. By prioritizing mobile-first design, we ensured responsiveness and clarity from the start.
+                  </p>
+              <Carousel className="p-1">
+                <CarouselContent>
+                  <CarouselItem className="basis-1/2">
+                    <div className="h-[700px] flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-home.png"
+                        alt="Slide 1"
+                        height={500}
+                        width={300}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="basis-1/2">
+                    <div className="h-[700px] flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-list.png"
+                        alt="Slide 2"
+                        height={500}
+                        width={300}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="basis-1/2">
+                    <div className="h-[700px] flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-group.png"
+                        alt="Slide 3"
+                        height={500}
+                        width={300}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="basis-1/2">
+                    <div className="h-[700px] flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-settings.png"
+                        alt="Slide 3"
+                        height={500}
+                        width={300}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              </section>
+
+            <section className="space-y-4">
+                <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">Web Application Layout</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  After creating the mobile mockup, we quickly realized that we did not have enough time to continue with a react native application. From the mobile design that I created, we pivoted to a standard react-app that switches between dark and light modes. This was the project that got me into graphic design and learning how to make pages look user-friendly, if I were to redo the page, I would definitely change up the layout and make it simpler to understand. 
+                </p>
+                <Carousel className="p-1">
+                <CarouselContent>
+                  <CarouselItem className="">
+                    <div className=" flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-home-light.png"
+                        alt="Slide 2"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="">
+                    <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-home-dark.png"
+                        alt="Slide 3"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              </section>
 
             <section className="space-y-4">
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                For user authentication and account sign-up our website integrates google authentication for seamless sign-in through firebase, providing a secure and efficient login process. Users can create groups easily and invite others through their respective email addresses. This enhances collaboration between users and simplifies the process of expanding group membership.                
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+              <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-auth.png"
+                        alt="Slide 3"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Upon signing into the webpage, the google auth API allowed use to create an icon on the top right of the screen allowing for users to logout seamlessly.                 
                 </p>
+                  <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-login.png"
+                        alt="Slide 3"
+                        height={500}
+                        width={500}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+
+              <p className="text-lg text-gray-300 leading-relaxed">
+                In our app, "My Tasks" becomes your personal hub for seamless teamwork. Tasks flow seamlessly from group sections, getting randomly assigned to ensure a fair workload distribution for everyone            
+                </p>
+                <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-dashboard.png"
+                        alt="Slide 3"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+              
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Coming off of the My Tasks, the user is able to select 2 other additional options with the aim of editing user to user interactions. The **Group Tasks** page display a list of all available tasks that are too be completed in the entire group, in our case this reflects the total household chores for our house. User's additionally have the option of adding new tasks and setting their frequency, with the application automatically assigning tasks to group constituents.        
+                </p>
+                <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-grouptasks.png"
+                        alt="Slide 3"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+              
+              <p className="text-lg text-gray-300 leading-relaxed">
+               The Settings page allows the user to either create a group or join an existing group through their email IDs. Once you join a group, you will be able to view all the group members, including the Slacker, who is assigned the least amount of tasks. This feature encourages active participation and accountability within the group, ensuring a fair distribution of tasks and promoting a sense of teamwork and productivity.   
+                </p>
+                <div className="flex items-center justify-center">
+                      <Image
+                        src="/slacker/slacker-settings-web.png"
+                        alt="Slide 3"
+                        height={900}
+                        width={900}
+                        className="rounded-md object-contain max-h-full"
+                        unoptimized
+                      />
+                    </div>
+
               </section>
 
-            <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 10000,
-              //   }),
-              // ]}
-            className="p-1">
-              <CarouselContent>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://skinnonews.com/global/wp-content/uploads/sites/2/2022/07/1180px_3.jpg"
-                      alt="Slide 2"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://media.wired.com/photos/655692cf7a953ed215c7b1d8/master/pass/Ford-F-150-Lightning-Featured-Gear.jpg"
-                      alt="Slide 1"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://images.mktw.net/im-47931009?width=1260&height=840"
-                      alt="Slide 3"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
 
 
 

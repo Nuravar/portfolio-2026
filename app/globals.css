@@ -160,3 +160,4 @@
   image-rendering: pixelated;
   transform: scale(0.15) scale(6.7); /* 0.15 * 6.7 ≈ 1 (back to full size but pixelated) */
 }
+
