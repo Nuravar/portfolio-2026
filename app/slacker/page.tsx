@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from '@/components/footer';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image";
 import FaultyTerminal from '@/components/ui/terminal';
 import { ExternalLinkCard } from "@/components/link-preview";

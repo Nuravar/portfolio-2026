@@ -5,10 +5,8 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { AppSidebar } from "@/components/app-sidebar";
 import { Home, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from '@/components/footer';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image";
 import Dither from '@/components/ui/dither';
 import {

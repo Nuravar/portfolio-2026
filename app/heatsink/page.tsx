@@ -9,7 +9,6 @@ import Footer from '@/components/footer';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import DarkVeil from '@/components/ui/dark-veil';
-import { ExternalLinkCard } from "@/components/link-preview";
 import {
   Tooltip,
   TooltipContent,
@@ -292,7 +291,7 @@ export default function BlogCaseStudyPage() {
         <h2 className="text-3xl font-bold text-white">Background Research</h2>
         
         <p className="text-lg text-gray-300 leading-relaxed">
-          To begin, our first challenge was to answer the question: <strong className="text-white">"How do we start to design a heatsink?"</strong>
+          To begin, our first challenge was to answer the question: <strong className="text-white"> How do we start to design a heatsink?</strong>
         </p>
         
         <p className="text-lg text-gray-300 leading-relaxed">
