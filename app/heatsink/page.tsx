@@ -329,7 +329,7 @@ export default function BlogCaseStudyPage() {
         <p className="text-center text-base text-gray-400 italic">Noctua CPU cooler designed for natural convection alongside a fan</p>
 
         <p className="text-lg text-gray-300 leading-relaxed">
-          In my preliminary research, I found a couple of interesting articles and features regarding how natural convector heatsinks are designed. Generally, natural convection heatsinks are designed around thin, vertical fins that allow for the easy movement of air throughout the entire heatsink.
+          In my preliminary research, I found a variety of interesting articles and features regarding how natural convector heatsinks are designed. Generally, natural convection heatsinks are designed around thin, vertical fins that allow for the easy movement of air throughout the entire heatsink.
         </p>
 
         <p className="text-lg text-gray-300 leading-relaxed">
