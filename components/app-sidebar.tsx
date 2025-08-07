@@ -13,7 +13,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { AtSign, Paperclip, Linkedin, Github, ExternalLink, ChevronRight, CarFront, University, Car, File } from "lucide-react";
+import { AtSign, Paperclip, Linkedin, Github, ExternalLink, ChevronRight, CarFront, University, File } from "lucide-react";
 import Link from "next/link";
 
 const navigationItems = [
