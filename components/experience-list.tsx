@@ -5,86 +5,82 @@ import Image from 'next/image';
 const TeamExperience = () => {
   const experiences = [
     {
-      id: 1,
-      company: 'Dana',
-      role: 'Material R&D Engineering Intern',
-      year: '2025',
-      logoSrc: "/companyLogos/dana-logo.png",
-      logoAlt: "Dana Incorporated Logo",
-      bgColor: 'bg-white',
-      bullets: [
-        'Conducted advanced material testing and analysis for automotive applications',
-        'Developed innovative composite materials for lightweight vehicle components',
-        'Collaborated with cross-functional teams on R&D projects',
-        'Presented research findings to senior engineering leadership'
-      ]
-    },
-    {
-      id: 2,
-      company: 'Dana',
-      role: 'Product Engineering Intern',
-      year: '2024',
-      logoSrc: "/companyLogos/dana-logo.png",
-      logoAlt: "Dana Incorporated Logo",
-      bgColor: 'bg-white text-black',
-      bullets: [
-        'Designed and optimized automotive drivetrain components',
-        'Performed CAD modeling and finite element analysis',
-        'Supported product validation testing and documentation',
-        'Contributed to cost reduction initiatives through design improvements'
-      ]
-    },
-        {
-      id: 3,
-      company: 'McMaster Faculty of Engineering',
-      role: 'Teaching Assistant',
-      year: '2022 - Present',
+      id: 5,
+      company: 'McMaster University',
+      role: 'Engineering Teaching Assistant',
+      year: 'Jan 2023 - ░░▒▒░▒',
       logoSrc: "/companyLogos/McMasterEngLogo.png",
       logoAlt: "McMaster Logo",
       bgColor: 'bg-white',
       bullets: [
-        'Assisted students with engineering coursework and laboratory exercises',
-        'Graded assignments and provided constructive feedback',
-        'Conducted tutorial sessions and office hours',
-        'Supported course development and curriculum improvements'
+        'Mentored 20-30 students weekly on challenging coding and 3D-modelling concepts',
+        'Elevated student grades to >90% through comprehensive lab instruction',
+        'Conducted tutorial sessions and provided personalized academic support',
+        'Assisted with course development and grading responsibilities'
       ]
     },
     {
-      id: 4,
+      id: 1,
+      company: 'Dana Incorporated',
+      role: 'Materials Engineering Intern, Joining Technologies R&D',
+      year: 'Jan 2025 - Aug 2025',
+      logoSrc: "/companyLogos/dana-logo.png",
+      logoAlt: "Dana Incorporated Logo",
+      bgColor: 'bg-white',
+      bullets: [
+        'Conducted advanced materials research on aluminum and copper brazing alloys, testing over 1000 samples to optimize tensile strength, corrosion resistance, and thermal conductivity properties',
+        'Implemented Digital Image Correlation (DIC) technology and developed Python-based material property databases for the R&D lab',
+        'Streamlined root-cause analysis workflows enabling faster identification of factory issues',
+        'Supported $200K+ in cost-reduction initiatives through strategic material replacements'
+      ]
+    },
+    {
+      id: 2,
+      company: 'Dana Incorporated',
+      role: 'Mechanical Engineering Intern, Battery Cooling',
+      year: 'Jun 2024 - Dec 2024',
+      logoSrc: "/companyLogos/dana-logo.png",
+      logoAlt: "Dana Incorporated Logo",
+      bgColor: 'bg-white text-black',
+      bullets: [
+        'Conducted developmental studies to optimize battery cooling systems for electric vehicles',
+        'Implemented cost-reduction initiatives yielding 11% savings per part',
+        'Performed failure analysis on over 1000 prototypes investigating material defects, powder coating coverage, and braze integrity',
+        'Developed Python scripts to automate GD&T dimensional tracking, reducing manual work by 4 hours weekly'
+      ]
+    },
+    {
+      id: 3,
       company: 'McMaster Formula Electric',
-      role: 'Software Developer',
-      year: '2024',
+      role: 'Software Engineer, Firmware',
+      year: 'Jan 2024 - Dec 2024',
       logoSrc: "/companyLogos/mcfe.png",
       logoAlt: "McMaster Formula Electric Logo",
       bgColor: 'bg-white text-black',
       bullets: [
-        'Developed embedded software for electric vehicle control systems',
-        'Implemented data acquisition and telemetry systems',
-        'Optimized battery management system algorithms',
-        'Collaborated on vehicle testing and performance analysis'
+        'Developed a hardware-in-the-loop (HIL) testing system using Go and WebSockets on Raspberry Pi',
+        'Built an interactive React dashboard for real-time data visualization',
+        'Improved debugging efficiency and accelerated test cycle times'
       ]
     },
     {
-      id: 5,
-      company: 'McMaster Solar Car Racing',
-      role: 'Software Developer',
-      year: '2023',
+      id: 4,
+      company: 'McMaster SolarCar',
+      role: 'Mechanical Engineer, Suspension',
+      year: 'Oct 2023 - Apr 2024',
       logoSrc: "/companyLogos/macsolar.jpg",
       logoAlt: "McMaster Solar Car Racing Logo",
       bgColor: 'bg-white text-black',
       bullets: [
-        'Developed race strategy software and real-time monitoring systems',
-        'Implemented solar panel efficiency optimization algorithms',
-        'Created data visualization tools for race performance analysis',
-        'Participated in international solar car racing competitions'
+        'Aided comprehensive vehicle fabrication efforts including machining aluminum chassis components',
+        'Optimized both vehicle dynamics and manufacturing decisions',
+        'Worked on seat bars, wheel hubs, and motor mounts fabrication'
       ]
     },
-  ];
+];
 
   return (
     <div className="text-white rounded-lg pt-8">
-      <h2 className="text-muted-foreground text-xs font-small mb-4 tracking-wide">Experience</h2>
-
       <Accordion type="single" collapsible className="w-full">
         {experiences.map((exp) => (
           <AccordionItem key={exp.id} value={`item-${exp.id}`} className="border-gray-800">
@@ -117,7 +113,7 @@ const TeamExperience = () => {
                 </div>
 
                 {/* Year */}
-                <div className="text-gray-400 text-xs font-medium mr-4">
+                <div className="text-muted-foreground text-xs font-small mr-4">
                   {exp.year}
                 </div>
               </div>

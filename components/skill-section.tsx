@@ -120,7 +120,7 @@ const SkillsSection: React.FC = () => {
 
     return (
       <div className="w-full">
-        <h3 className="font-semibold mb-4 text-left transition-colors duration-300 hover:text-gray-300">{title}</h3>
+        <h2 className="mb-4 text-left transition-colors text-muted-foreground">{title}</h2>
         <div className="space-y-2">
           {displayedSkills.map((skill: Skill, index: number) => (
             <SkillItem key={skill.name} skill={skill} index={index} isVisible={true} />
@@ -154,9 +154,6 @@ const SkillsSection: React.FC = () => {
   return (
     <div className="hidden lg:block w-full">
       <div className="mb-8">
-        <h2 className="pt-4 text-muted-foreground text-xs font-small mb-4 tracking-wide transition-all duration-300 hover:tracking-wider">
-          Technical Skills
-        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
@@ -181,14 +178,14 @@ const SkillsSection: React.FC = () => {
       <div className="mt-8 text-center">
         <button
           onClick={toggleExpanded}
-          className="flex items-center justify-center space-x-2 mx-auto px-6 py-2 transition-all duration-300 ease-out hover:bg-gray-800 rounded-lg group"
+         className="flex items-center justify-center space-x-2 mx-auto px-6 py-2 transition-all duration-300 ease-out  hover:bg-[#28201d] rounded-lg group"
         >
           {isExpanded ? (
-            <ChevronUp className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+            <ChevronUp className="w-4 h-4 transition-transform text-muted-foreground duration-200 group-hover:scale-110" />
           ) : (
-            <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+            <ChevronDown className="w-4 h-4 transition-transform text-muted-foreground duration-200 group-hover:scale-110" />
           )}
-          <span className="transition-colors duration-200 group-hover:text-gray-300">
+          <span className="transition-colors text-muted-foreground">
             {isExpanded ? 'Show Less' : 'Show More'}
           </span>
         </button>

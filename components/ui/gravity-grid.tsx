@@ -16,7 +16,7 @@ interface ActiveCell {
 const GravityGrid: React.FC<GravityGridProps> = ({
   columns = 39,
   rows = 7,
-  animationSpeed = 250,
+  animationSpeed = 300,
   squareSize = 30
 }) => {
   const [activeCells, setActiveCells] = useState<ActiveCell[]>([]);

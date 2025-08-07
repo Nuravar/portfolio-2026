@@ -128,7 +128,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects = [] }) => {
           >
             {/* Background Image with Fixed Gradient */}
             <div
-              className="relative w-full h-100 bg-cover bg-center transition-all duration-300 group-hover:brightness-110 rounded-lg overflow-hidden hover:ring-[3px] hover:ring-[#584B50] hover:ring-offset-1 hover:ring-offset-background"
+              className="relative w-full h-100 bg-cover bg-center transition-all duration-300 group-hover:brightness-110 rounded-lg overflow-hidden hover:ring-[3px] hover:ring-[#c9b6a5] hover:ring-offset-1 hover:ring-offset-background"
               style={{
                 backgroundImage: project.backgroundImage 
                   ? `url(${project.backgroundImage}), ${getProjectGradient(project.id, project.gradient)}`

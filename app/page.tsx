@@ -14,18 +14,18 @@ import SkillsSection from "@/components/skill-section";
 import ProjectGrid from "@/components/project-card";
 import Footer from "@/components/footer";
 import { Home } from "lucide-react";
-import GravityGrid from "@/components/gravity-grid";
+import GravityGrid from "@/components/ui/gravity-grid";
 import LocationAndTimeDisplay from "@/components/location-indicator";
 import ResumeEmailButtons from "@/components/resume-email-btn";
+import Link from "next/link";
 
 export default function HomePage() {
   const [isOrange] = useState(false);
 
-
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="flex-1">
+      <main className="flex-1 dotted-paper-bg-subtle"> {/* Added dotted background class */}
         {/* Top header with breadcrumb and mobile sidebar trigger */}
         <div className="flex h-16 items-center justify-between px-4 lg:px-6 border-b border-neutral-800">
           <Breadcrumb>
@@ -44,43 +44,37 @@ export default function HomePage() {
 
         {/* Main Content */}
         <div className="px-4 py-8 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight">
-              Engineering student with focus on materials research and mechanical design.
-            </h1>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              I develop and prototype engineering solutions through advanced materials research,
-              embedded systems, and mechanical design. Currently working on electrical vehicle
-              battery cooling optimization and brazing alloys at{" "}
-              <strong>Dana Incorporated</strong>.<br />
-              In my free time, I enjoy playing the violin, graphic design, and playing soccer.
-            </p>
+          <div className="text-sm text-gray-500 flex items-center gap-4 max-w-4xl">
+            <LocationAndTimeDisplay />
+          </div>
 
-            <small className="flex items-center gap-2 text-muted-foreground">
-              <div className="relative">
-                <div
-                  className={`w-2 h-2 rounded-full ${
-                    isOrange ? "bg-orange-400" : "bg-green-400"
-                  } animate-pulse`}
-                  style={{
-                    filter: isOrange
-                      ? "drop-shadow(0 0 4px rgba(251, 146, 60, 0.6))"
-                      : "drop-shadow(0 0 4px rgba(74, 222, 128, 0.6))",
-                  }}
-                />
-                <div
-                  className={`absolute inset-0 w-2 h-2 rounded-full ${
-                    isOrange ? "bg-orange-400" : "bg-green-400"
-                  } animate-ping opacity-20`}
-                />
-              </div>
-              <span>
-                Currently seeking <strong>Summer 2026 Engineering Internships</strong>
-              </span>
-            </small>
+          <div className="space-y-4 max-w-7xl">
+            <h1 className="text-lg text-gray-300 leading-relaxed max-w-4xl">
+              👋 Hi, I'm Varun. I'm a designer, mechanical engineer, and obsessed with building things that move. I previously worked as an R&D engineering intern at <Link href="https://www.dana.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Dana</Link>, designing and prototyping electric vehicle thermal systems, with roles spanning both mechanical and materials engineering. <br/><br/>
+
+              Before Dana, I joined two student-run teams at McMaster: <Link href="https://macformularacing.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Formula Electric</Link> and <Link href="https://mcmaster.ca/solarcar" prefetch={false} className="underline hover:text-white duration-200 ease-in">Solar Car Racing</Link>. At Formula, I worked on a hardware-in-the-loop testing platform, and at Solar Car, I helped manufacture the vehicle. <br/><br/>
+
+              Currently studying Mechatronics and Biomedical Engineering at McMaster University. For the past three years, I've also been a teaching assistant for engineering courses focused on building electromechanical projects. 
+            </h1>
+
+            <div className="pt-2">
+              <small className="flex items-center gap-2 text-gray-300">
+                <div className="relative">
+                  <div
+                    className="w-2 h-2 rounded-full bg-green-400 animate-pulse"
+                    style={{
+                      filter: "drop-shadow(0 0 4px rgba(74, 222, 128, 0.6))",
+                    }}
+                  />
+                  <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-400 animate-ping opacity-20" />
+                </div>
+                <span>
+                  Currently seeking <strong>Summer 2026 Engineering Internships</strong>
+                </span>
+              </small>
+            </div>
 
             <ResumeEmailButtons />
-            <LocationAndTimeDisplay />
             <GravityGrid />
             <TeamExperience />
             <SkillsSection />
