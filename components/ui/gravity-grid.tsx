@@ -129,7 +129,7 @@ const GravityGrid: React.FC<GravityGridProps> = ({
   return (
     <div 
       ref={setContainerRef}
-      className="hidden md:block w-full overflow-hidden"
+      className="hidden md:block w-full overflow-hidden pt-4"
       style={{ backgroundColor: '#131110' }}
     >
       <div 

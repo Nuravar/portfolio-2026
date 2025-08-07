@@ -80,7 +80,7 @@ const TeamExperience = () => {
 ];
 
   return (
-    <div className="text-white rounded-lg pt-8">
+    <div className="text-white rounded-lg py-8">
       <Accordion type="single" collapsible className="w-full">
         {experiences.map((exp) => (
           <AccordionItem key={exp.id} value={`item-${exp.id}`} className="border-gray-800">

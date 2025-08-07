@@ -118,7 +118,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects = [] }) => {
   };
 
   return (
-    <div className="w-full max-w-10xl mx-auto pt-8">
+    <div className="w-full max-w-10xl mx-auto py-8">
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
         {projectsToDisplay.map((project) => (
           <div

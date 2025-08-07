@@ -152,7 +152,7 @@ const SkillsSection: React.FC = () => {
   };
 
   return (
-    <div className="hidden lg:block w-full">
+    <div className="hidden lg:block w-full py-8">
       <div className="mb-8">
       </div>
 
@@ -175,7 +175,7 @@ const SkillsSection: React.FC = () => {
         />
       </div>
 
-      <div className="mt-8 text-center">
+      <div className=" text-center">
         <button
           onClick={toggleExpanded}
          className="flex items-center justify-center space-x-2 mx-auto px-6 py-2 transition-all duration-300 ease-out  hover:bg-[#28201d] rounded-lg group"
