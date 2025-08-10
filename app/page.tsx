@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="flex-1 dotted-paper-bg-subtle"> {/* Added dotted background class */}
+      <main className="flex-1 "> {/* Added dotted background class: dotted-paper-bg-subtle*/}
         {/* Top header with breadcrumb and mobile sidebar trigger */}
         <div className="flex h-16 items-center justify-between px-4 lg:px-6 border-b border-neutral-800">
           <Breadcrumb>
@@ -50,7 +50,7 @@ export default function HomePage() {
             <h1 className="text-lg text-gray-300 leading-relaxed max-w-4xl">
               👋 Hi, I'm Varun. I'm a designer, mechanical engineer, and obsessed with building things that move. I previously worked as an R&D engineering intern at <Link href="https://www.dana.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Dana</Link>, designing and prototyping electric vehicle thermal systems, with roles spanning both mechanical and materials engineering. <br/><br/>
 
-              Before Dana, I joined two student-run teams at McMaster: <Link href="https://macformularacing.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Formula Electric</Link> and <Link href="https://mcmaster.ca/solarcar" prefetch={false} className="underline hover:text-white duration-200 ease-in">Solar Car Racing</Link>. At Formula, I worked on a hardware-in-the-loop testing platform, and at Solar Car, I helped manufacture the vehicle. <br/><br/>
+              Before Dana, I joined two student-run teams at McMaster: <Link href="https://macformularacing.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Formula Student</Link> and <Link href="https://mcmaster.ca/solarcar" prefetch={false} className="underline hover:text-white duration-200 ease-in">Solar Car Racing</Link>. At Formula, I worked on a hardware-in-the-loop testing platform, and at Solar Car, I helped manufacture the vehicle. <br/><br/>
 
               Currently studying Mechatronics and Biomedical Engineering at McMaster University. For the past three years, I've also been a teaching assistant for engineering courses focused on building electromechanical projects. 
             </h1>
@@ -76,7 +76,7 @@ export default function HomePage() {
             <GravityGrid />
             <TeamExperience />
             <SkillsSection />
-            <ProjectGrid />
+            <ProjectGrid fullWidthCount={1} />
           </div>
         </div>
 

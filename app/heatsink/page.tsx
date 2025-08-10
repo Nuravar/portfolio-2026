@@ -196,7 +196,7 @@ export default function BlogCaseStudyPage() {
         <Carousel className="p-1">
                 <CarouselContent>
                   <CarouselItem className="">
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center h-[600px]">
                       <Image
                         src="/heatsink/heatsink-model.png"
                         alt="Slide 1"
@@ -208,7 +208,7 @@ export default function BlogCaseStudyPage() {
                     </div>
                   </CarouselItem>
                   <CarouselItem className="">
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center h-[600px]">
                       <Image
                        src="/heatsink/heatsink-cpu.png"
                         alt="Slide 2"
@@ -220,7 +220,7 @@ export default function BlogCaseStudyPage() {
                     </div>
                   </CarouselItem>
                   <CarouselItem className="">
-                    <div className=" flex items-center justify-center">
+                    <div className=" flex items-center justify-center h-[600px]">
                       <Image
                         src="/heatsink/heatsink-plate.png"
                         alt="Slide 3"
@@ -431,7 +431,7 @@ export default function BlogCaseStudyPage() {
             <CarouselContent>
               <CarouselItem>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center h-[300px]">
                     <Image
                       src="/heatsink/hoetal.png"
                       height={650}
@@ -446,7 +446,7 @@ export default function BlogCaseStudyPage() {
               </CarouselItem>
               <CarouselItem>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center h-[300px]">
                     <Image
                       src="/heatsink/hangli.png"
                       height={500}
@@ -461,7 +461,7 @@ export default function BlogCaseStudyPage() {
               </CarouselItem>
               <CarouselItem>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center h-[300px]">
                     <Image
                       src="/heatsink/seeetal.png"
                       height={600}
@@ -663,19 +663,19 @@ export default function BlogCaseStudyPage() {
               <h4 className="text-lg font-semibold text-white mb-2">Disadvantages</h4>
               <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Expensive to program the path and to operate the machine</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Would require the part to be separated into different pieces that are machined separately</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Metal would be wasted as large blocks of metal are milled from a block, thus inefficient costs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Extremely difficult to mill the holes between the heatsink fins, as new designs would be necessary to accommodate the mill</span>
                 </li>
               </ul>
@@ -690,11 +690,11 @@ export default function BlogCaseStudyPage() {
               <h4 className="text-lg font-semibold text-white mb-2">Advantages</h4>
               <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Allows for lowered material use, creating less waste per volume</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Heatsink fin holes can be manufactured without complication by placing a cylinder inside of the mold</span>
                 </li>
               </ul>
@@ -703,15 +703,15 @@ export default function BlogCaseStudyPage() {
               <h4 className="text-lg font-semibold text-white mb-2">Disadvantages</h4>
               <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Imprecise nature of the molding. However, since the final heatsink does not undergo any physical strain or hold fluids, it does not need to be extremely precise</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>High porosity that would affect performance of the heatsink</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white mt-2">•</span>
+                  <span className="text-white">•</span>
                   <span>Difficult to mold pure aluminum and copper which results in porosity. Might be better to use an alloy instead</span>
                 </li>
               </ul>
@@ -740,11 +740,11 @@ export default function BlogCaseStudyPage() {
             <h3 className="text-xl font-semibold text-white">Manufacturability</h3>
             <ul className="space-y-2 text-lg text-gray-300 leading-relaxed">
               <li className="flex items-start gap-3">
-                <span className="text-white mt-2">•</span>
+                <span className="text-white">•</span>
                 <span><strong className="text-white">CNC:</strong> Copper is abrasive on tools but allows precise finishes, aluminum is easy to machine with low cost, and silver is soft, prone to deformation, and inefficient to machine</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-white mt-2">•</span>
+                <span className="text-white">•</span>
                 <span><strong className="text-white">Injection Moulding:</strong> Aluminum is by far the easiest to mold as copper has issues with oxidation, high melting points, and poor flow in molding processes</span>
               </li>
             </ul>
@@ -777,15 +777,15 @@ export default function BlogCaseStudyPage() {
         
         <ul className="space-y-3 text-lg text-gray-300 leading-relaxed">
           <li className="flex items-start gap-3">
-            <span className="text-white mt-2">•</span>
+            <span className="text-white">•</span>
             <span>Running CFD simulations alongside thermal FEA simulations</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-white mt-2">•</span>
+            <span className="text-white">•</span>
             <span>High-performance organizations, like F1 teams, develop algorithms to automate pre and post processing CFD simulations for their aerodynamic studies. To increase the efficiency of the workflow, scripts can be used to adjust boundary conditions and visualize data</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-white mt-2">•</span>
+            <span className="text-white">•</span>
             <span>Black-box topology optimizations</span>
           </li>
         </ul>

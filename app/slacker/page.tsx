@@ -72,17 +72,17 @@ export default function BlogCaseStudyPage() {
                 <FaultyTerminal
                   scale={2.5}
                   gridMul={[2, 1]}
-                  digitSize={1.2}
-                  timeScale={0.3}
+                  digitSize={1.4}
+                  timeScale={0.2}
                   pause={false}
                   scanlineIntensity={0.1}
-                  glitchAmount={0.1}
+                  glitchAmount={0.3}
                   flickerAmount={1}
                   noiseAmp={1}
                   chromaticAberration={0}
-                  dither={0.5}
-                  curvature={0}
-                  tint="#4E312F"
+                  dither={0.6}
+                  curvature={0.1}
+                  tint="#d47270"
                   mouseReact={false}
                   mouseStrength={0.5}
                   pageLoadAnimation={false}

@@ -8,8 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from '@/components/footer';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import Image from "next/image";
+
 import {
   Carousel,
   CarouselContent,
@@ -185,26 +184,319 @@ export default function BlogCaseStudyPage() {
             <article className="space-y-8">
 
 
-              {/* Introduction Section */}
+              {/* Testing & Verification Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Testing & Verification</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  In order to examine whether our physical prototype was functional, we created a testing platform to visually inspect our software performance. Our verification plan involved creating the Melbourne Grand Prix circuit for comprehensive testing.
+                </p>
+
+                {/* Test Track Image */}
+                <div className="bg-yellow-600/20 border border-yellow-500 rounded-lg p-6 text-center">
+                  <p className="text-yellow-300 font-semibold">🏁 INSERT IMAGE: Test Track</p>
+                  <p className="text-sm text-yellow-300 mt-2">Melbourne Grand Prix circuit mockup for verification testing (Untitled 7.png)</p>
+                </div>
+
+                {/* Verification Steps Table */}
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-white mb-4">Verification Plan Steps</h3>
+                  <div className="space-y-2 text-sm">
+                    <div className="grid grid-cols-12 gap-2 font-semibold text-gray-300 border-b border-gray-600 pb-2">
+                      <div className="col-span-1">Step</div>
+                      <div className="col-span-8">Description</div>
+                      <div className="col-span-3">Expected Outcome</div>
+                    </div>
+                    <div className="grid grid-cols-12 gap-2 text-gray-300">
+                      <div className="col-span-1">1</div>
+                      <div className="col-span-8">Assemble completion course with black line and walls</div>
+                      <div className="col-span-3">Ready test environment</div>
+                    </div>
+                    <div className="grid grid-cols-12 gap-2 text-gray-300">
+                      <div className="col-span-1">2</div>
+                      <div className="col-span-8">Place camera above circuit and start robot</div>
+                      <div className="col-span-3">Begin video recording</div>
+                    </div>
+                    <div className="grid grid-cols-12 gap-2 text-gray-300">
+                      <div className="col-span-1">3</div>
+                      <div className="col-span-8">Review footage for wall collisions and line following</div>
+                      <div className="col-span-3">Pass/fail analysis</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Test Results */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-white">Test Results</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-green-900/30 border border-green-600 p-4 rounded-lg">
+                      <h4 className="font-semibold text-green-400 mb-2">✓ Passed Tests</h4>
+                      <ul className="text-sm text-green-300 space-y-1">
+                        <li>• Stayed centered on black line</li>
+                        <li>• Smooth traversal with minimal stops</li>
+                      </ul>
+                    </div>
+                    <div className="bg-yellow-900/30 border border-yellow-600 p-4 rounded-lg">
+                      <h4 className="font-semibold text-yellow-400 mb-2">⚠ Partial Success</h4>
+                      <ul className="text-sm text-yellow-300 space-y-1">
+                        <li>• Speed limited by camera framerate</li>
+                        <li>• Struggled with sharp turns (camera only)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Video Placeholder */}
+                <div className="bg-purple-600/20 border border-purple-500 rounded-lg p-6 text-center">
+                  <p className="text-purple-300 font-semibold">🎥 INSERT VIDEO: ROB Verification</p>
+                  <p className="text-sm text-purple-300 mt-2">Demo video showing robot following track (ROB-Verification.mov)</p>
+                </div>
+              </section>
+
+              {/* Remote Communication Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Remote Communication & Control</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Although we did not implement it into our final physical prototype due to time constraints, through Tailscale and WebSockets, I was able to remotely communicate with the Raspberry Pi-based RC car and send it instructions. The plan was to use remote start signals to initiate the line-following program.
+                </p>
+
+                {/* Remote Control Demo Video */}
+                <div className="bg-cyan-600/20 border border-cyan-500 rounded-lg p-6 text-center">
+                  <p className="text-cyan-300 font-semibold">📡 INSERT VIDEO: Remote Control Demo</p>
+                  <p className="text-sm text-cyan-300 mt-2">WebSocket communication demonstration (VID_20240331_022100.mp4)</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">Technology Stack</h3>
+                    <ul className="text-gray-300 space-y-2">
+                      <li>• <strong>Tailscale VPN:</strong> Secure remote network access</li>
+                      <li>• <strong>WebSocket Server:</strong> Real-time bidirectional communication</li>
+                      <li>• <strong>Raspberry Pi:</strong> Embedded control system</li>
+                      <li>• <strong>Remote Commands:</strong> Start/stop line following program</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">Setup Process</h3>
+                    <p className="text-gray-300 text-sm">
+                      Tailscale creates a remote VPN on the current or external WiFi that allows two devices to locally communicate with each other without any complex setup. Through WebSockets, we created a server on the Raspberry Pi that enabled bidirectional signal communication.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Lessons Learned Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Lessons Learned & Future Improvements</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Throughout this project, I achieved most of my initial goals, fueled by a longstanding interest in robotics and a desire to create something both functional and visually appealing. However, the project faced several challenges that provided valuable learning experiences.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* What I Learned */}
+                  <div className="bg-green-900/20 border border-green-600 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-green-400 mb-3">🎓 What I Learned</h3>
+                    <ul className="text-green-300 space-y-2 text-sm">
+                      <li>• Crucial role of design inputs and outputs</li>
+                      <li>• Value of FMEA and QFD tables for risk analysis</li>
+                      <li>• Importance of early feasibility evaluation</li>
+                      <li>• Integration of hardware and software systems</li>
+                    </ul>
+                  </div>
+
+                  {/* Challenges Faced */}
+                  <div className="bg-red-900/20 border border-red-600 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-red-400 mb-3">⚠️ Challenges Faced</h3>
+                    <ul className="text-red-300 space-y-2 text-sm">
+                      <li>• Time management difficulties</li>
+                      <li>• Mechanical assembly took longer than expected</li>
+                      <li>• Phototransistor component failures</li>
+                      <li>• Code development was underrepresented</li>
+                    </ul>
+                  </div>
+
+                  {/* Future Improvements */}
+                  <div className="bg-blue-900/20 border border-blue-600 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-blue-400 mb-3">🚀 For The Future</h3>
+                    <ul className="text-blue-300 space-y-2 text-sm">
+                      <li>• Prioritize physical construction from the start</li>
+                      <li>• Consider purchasing existing platforms for faster development</li>
+                      <li>• Use simulation software for behavior testing</li>
+                      <li>• Focus efforts rather than dividing attention</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-white">Alternative Approaches</h3>
+                  <p className="text-gray-300">
+                    In hindsight, I could have opted for simpler solutions, like purchasing an Arduino line-following robot kit from Amazon to test our code. Other alternatives could have involved using simulation software to mimic the robot's behavior or leveraging existing open-source platforms to speed up development.
+                  </p>
+                </div>
+
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-white mb-3">Key Takeaway</h3>
+                  <p className="text-gray-300">
+                    <em>"Rather than placing primary focus on coding, I'll prioritize the physical construction of the robot from the start. My aim is to smooth out the development process, reducing the likelihood of encountering unexpected delays and ensuring a more streamlined path to completion."</em>
+                  </p>
+                </div>
+              </section>
+
+              {/* Technical Specifications Summary */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Technical Specifications Summary</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <Card className="bg-gray-800/50">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center text-white">Scale</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-3xl font-bold text-blue-400">1:6</div>
+                      <p className="text-xs text-gray-400 mt-1">Hospital mockup scale</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gray-800/50">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center text-white">Line Accuracy</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-3xl font-bold text-green-400">±2.35mm</div>
+                      <p className="text-xs text-gray-400 mt-1">At 1:6 scale</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gray-800/50">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center text-white">Safety Factor</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-3xl font-bold text-yellow-400">3.6</div>
+                      <p className="text-xs text-gray-400 mt-1">Minimum FEA result</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gray-800/50">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center text-white">Target Speed</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-3xl font-bold text-purple-400">10-15</div>
+                      <p className="text-xs text-gray-400 mt-1">km/hr hospital speed</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </section>
+
+              {/* Image Gallery Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Project Gallery</h2>
+                
+                {/* Main prototype images carousel */}
+                <Carousel className="p-1">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="bg-indigo-600/20 border border-indigo-500 rounded-lg p-8 text-center h-64 flex flex-col justify-center">
+                        <p className="text-indigo-300 font-semibold text-lg">🤖 Robot Assembly</p>
+                        <p className="text-sm text-indigo-300 mt-2">Complete R.O.B prototype with all components</p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="bg-pink-600/20 border border-pink-500 rounded-lg p-8 text-center h-64 flex flex-col justify-center">
+                        <p className="text-pink-300 font-semibold text-lg">🔧 Hardware Layout</p>
+                        <p className="text-sm text-pink-300 mt-2">Circuit diagrams and component placement</p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="bg-emerald-600/20 border border-emerald-500 rounded-lg p-8 text-center h-64 flex flex-col justify-center">
+                        <p className="text-emerald-300 font-semibold text-lg">🏗️ 3D CAD Model</p>
+                        <p className="text-sm text-emerald-300 mt-2">SolidWorks assembly and FEA analysis</p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="bg-amber-600/20 border border-amber-500 rounded-lg p-8 text-center h-64 flex flex-col justify-center">
+                        <p className="text-amber-300 font-semibold text-lg">🏁 Test Track</p>
+                        <p className="text-sm text-amber-300 mt-2">Melbourne Grand Prix verification circuit</p>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </section>
+
+              {/* FEA Analysis Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Structural Analysis & FEA Study</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  In addition to the robotic prototype, our team designed a full 3D assembly to reflect our final prototype. We conducted a comprehensive static FEA analysis to ensure structural integrity under expected loads.
+                </p>
+
+                {/* FEA Images Carousel Placeholder */}
+                <div className="bg-teal-600/20 border border-teal-500 rounded-lg p-6 text-center">
+                  <p className="text-teal-300 font-semibold">🔬 INSERT CAROUSEL: FEA Analysis Images</p>
+                  <p className="text-sm text-teal-300 mt-2">SolidWorks FEA study images (Untitled 8-15.png)</p>
+                  <p className="text-sm text-teal-300">• Face selection • Applied forces • Mesh generation • Stress analysis • Safety factor results</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">Key FEA Results</h3>
+                    <ul className="text-gray-300 space-y-2">
+                      <li>• <strong>Load Tested:</strong> 3000 N (300 kg equivalent)</li>
+                      <li>• <strong>Minimum Safety Factor:</strong> 3.6</li>
+                      <li>• <strong>Plastic Deformation:</strong> None detected</li>
+                      <li>• <strong>Stress Concentration:</strong> At attachment points</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">Material Strategy</h3>
+                    <p className="text-gray-300 text-sm">
+                      Our strategy focused on utilizing readily available and cost-effective materials. This approach ensures affordability and simplifies sourcing, making it easier to iterate and refine our design.
+                    </p>
+                  </div>
+                </div>
+              </section>
               <section className="space-y-4">
                 <h2 className="text-3xl font-bold text-white">Introduction</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                  In modern medicine, hospitals are understaffed and nurses are overworked. This results in nurses having to focus on tasks that are outside of what is actually important, treating patients. Our device <strong>R.O.B (Robot Operated Bed) utilizes a sensor system to follow the lines commonly found on hospital floors to get from one point to another</strong> with the goal of delivering patients, goods, or information.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Hospitals today face funding shortages, limiting their ability to handle patient influxes from disasters, pandemics, or mass casualties, demanding swift, efficient care. <strong>Nurses, crucial for patient care, are often overwhelmed with tasks</strong> like patient transport and delivering samples, leading to burnout and reduced care quality. <strong>Robotic porters present a solution by taking over these tasks</strong>, working non-stop, and improving accuracy, which boosts hospital efficiency and lets nurses focus on essential care roles.
                 </p>
               </section>
+
+              {/* Project Image Placeholder */}
+              <div className="bg-blue-600/20 border border-blue-500 rounded-lg p-6 text-center">
+                <p className="text-blue-300">🤖 INSERT PROJECT IMAGE: R.O.B prototype assembly</p>
+                <p className="text-sm text-blue-300 mt-2">Main robot prototype photo from Untitled.png</p>
+              </div>
               
               <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Project Impact</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Our porter allows for the automation of menial hospital tasks in important situations. <strong>Robotic porters present a solution by taking over these tasks</strong>, working non-stop, and improving accuracy, which boosts hospital efficiency and lets nurses focus on essential care roles, <strong>enhancing patient support and overall care quality.</strong>
+                </p>
+                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Cooling Efficiency</CardTitle>
+                      <CardTitle className="text-sm font-medium text-center">Line Following Accuracy</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+25%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Improvement over baseline</p>
+                      <div className="text-5xl font-extrabold">±10%</div>
+                      <p className="text-xs text-muted-foreground mt-1">Error from center line</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-center">Load Capacity</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center text-center">
+                      <div className="text-5xl font-extrabold">300kg</div>
+                      <p className="text-xs text-muted-foreground mt-1">Maximum supported weight</p>
                     </CardContent>
                   </Card>
 
@@ -213,127 +505,12 @@ export default function BlogCaseStudyPage() {
                       <CardTitle className="text-sm font-medium text-center">Battery Life</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+18%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Extended operational life</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Energy Consumption</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">-12%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Reduced cooling energy</p>
+                      <div className="text-5xl font-extrabold">12hr</div>
+                      <p className="text-xs text-muted-foreground mt-1">Continuous operation</p>
                     </CardContent>
                   </Card>
                 </div>
               </section>
-
-
-              <AspectRatio ratio={16 / 9}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="https://cdn.motor1.com/images/mgl/BXxr9A/s3/il-prototipo-camuffato-della-nuova-jaguar-elettrica-2024.jpg"
-                  alt="Image"
-                  unoptimized
-                  className="rounded-md object-cover"
-                  fill
-                />
-              </div>
-            </AspectRatio>
-
-            <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Challenges</h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-              <div className="flex gap-4">
-                <AspectRatio ratio={4 / 3} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://i.guim.co.uk/img/media/0e123a1c4f010f2868c2357da8df3f0cd5dc5393/0_72_2161_1297/master/2161.jpg?width=465&dpr=1&s=none&crop=none"
-                      alt="Jaguar"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-
-                <AspectRatio ratio={16 / 9} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://media.wired.com/photos/674874547f9330001e85096a/3:2/w_2560%2Cc_limit/JagTopArt2.jpg"
-                      alt="Another Car"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-              </div>
-
-            <section className="space-y-4">
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
-                </p>
-              </section>
-
-            <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 10000,
-              //   }),
-              // ]}
-            className="p-1">
-              <CarouselContent>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://skinnonews.com/global/wp-content/uploads/sites/2/2022/07/1180px_3.jpg"
-                      alt="Slide 2"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://media.wired.com/photos/655692cf7a953ed215c7b1d8/master/pass/Ford-F-150-Lightning-Featured-Gear.jpg"
-                      alt="Slide 1"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://images.mktw.net/im-47931009?width=1260&height=840"
-                      alt="Slide 3"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
 
 
 

@@ -18,11 +18,12 @@ import Link from "next/link";
 
 const navigationItems = [
   { id: 'dana', name: "Dana Inc.", href: "/dana", icon: CarFront },
-  { id: 'mcmaster-uni', name: "McMaster University", href: "/mcmastereng", icon: University },
+  { id: 'mcmaster-formula', name: "McMaster Formula Student", href: "https://macformularacing.com/", icon: University },
+  { id: 'mcmaster-solar', name: "McMaster Solar Car Project", href: "https://www.mcmastersolarcar.com/", icon: University },
 ];
 
 const projectItems = [
-  { id: 'robot-bed', name: "Robot Bed", href: "/rob", icon: File },
+  { id: 'heatsink', name: "Heatsink Design", href: "/heatsink", icon: File },
   { id: 'slacker-chores', name: "Slacker Chores", href: "/slacker", icon: File },
   { id: 'pace', name: "Pace++", href: "/paceplusplus", icon: File },
 ];
@@ -49,7 +50,7 @@ export function AppSidebar() {
               className="group transition-all duration-300 ease-out"
             >
               <Link href="/" className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-12">
+                {/* <div className="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-12">
                   <div className="w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ease-out " style={{ backgroundColor: '#372F32' }}>
                     <svg 
                       className="w-4 h-4 transition-all duration-300 ease-out group-hover:scale-110 group-hover:-rotate-12" 
@@ -59,10 +60,10 @@ export function AppSidebar() {
                       <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
                     </svg>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex-1 text-left">
                   <span className="text-base font-medium text-white/80 group-hover:text-white transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:tracking-wide">
-                    Varun Ram
+                    Varun Kothandararaman
                   </span>
                 </div>
               </Link>
