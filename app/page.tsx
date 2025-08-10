@@ -17,7 +17,7 @@ import GravityGrid from "@/components/ui/gravity-grid";
 import LocationAndTimeDisplay from "@/components/location-indicator";
 import ResumeEmailButtons from "@/components/resume-email-btn";
 import Link from "next/link";
-
+import { Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 export default function HomePage() {
 
   return (
@@ -42,6 +42,12 @@ export default function HomePage() {
 
         {/* Main Content */}
         <div className="px-4 py-8 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-8">
+          <div className="mb-2">
+            <Avatar className="w-15 h-15">
+              <AvatarImage src="/picolo.webp" alt="@shadcn" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </div>
           <div className="text-sm text-gray-500 flex items-center gap-4 max-w-4xl">
             <LocationAndTimeDisplay />
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Linkedin, AtSign, ArrowUp } from 'lucide-react';
+import {  ArrowUp } from 'lucide-react';
 
 interface FooterProps {
   linkedinUrl?: string;
@@ -42,14 +42,6 @@ const Footer: React.FC<FooterProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [showScrollTop]);
 
-  const handleLinkedinClick = () => {
-    window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
-  };
-
   const scrollToTop = () => {
     const scrollDuration = 1200; // Increased duration for smoother animation
     const startPosition = window.pageYOffset;
@@ -81,12 +73,8 @@ const Footer: React.FC<FooterProps> = ({
         style={{ backgroundColor: 'oklch(0.22 0.008 35)' }}
       >
         <div className="px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-left space-y-4">
-            <h1 className="text-sm font-bold">Get in touch :-)</h1>
-
-            <small className="block max-w-md text-muted-foreground">
-              I can be easily reached through{' '}
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
+          <div className="text-left space-y-4 text-muted-foreground">
+            <h1 className="text-sm ">I'm currently looking for mechanical or hardware engineering internship opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to reach me through <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
                 LinkedIn
               </a>{' '}
               or{' '}
@@ -96,28 +84,8 @@ const Footer: React.FC<FooterProps> = ({
               >
                 email
               </a>
-              .
-            </small>
+              .</h1>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Button
-                onClick={handleEmailClick}
-                variant="outline"
-                className="flex items-center gap-2 w-fit"
-              >
-                <AtSign className="w-3 h-3" />
-                Email
-              </Button>
-
-              <Button
-                onClick={handleLinkedinClick}
-                variant="outline"
-                className="flex items-center gap-2 w-fit"
-              >
-                <Linkedin className="w-3 h-3" />
-                LinkedIn
-              </Button>
-            </div>
           </div>
         </div>
       </footer>
@@ -134,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({
               : 'animate-in fade-in slide-in-from-bottom-4 duration-200'
           }`}
         >
-          <ArrowUp className="w-4 h-4 animate-bounce hover:animate-none transition-all" />
+          <ArrowUp className="w-4 h-4 hover:animate-bounce transition-all" />
           <span className="sr-only">Back to top</span>
         </Button>
       )}
