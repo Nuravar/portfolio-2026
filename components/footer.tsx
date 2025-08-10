@@ -74,10 +74,10 @@ const Footer: React.FC<FooterProps> = ({
       >
         <div className="px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
           <div className="text-left space-y-4 text-muted-foreground">
-            <h1 className="text-sm ">I'm currently looking for mechanical or hardware engineering internship opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to reach me through <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
+            <h1 className="text-sm "><strong>I’m actively seeking mechanical or hardware engineering internship opportunities.</strong><br/> If you know of any openings, have questions, or just want to connect, feel free to reach out to me on <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
                 LinkedIn
               </a>{' '}
-              or{' '}
+              or by{' '}
               <a
                 href={`mailto:${email}`}
                 className="hover:text-gray-300 underline"

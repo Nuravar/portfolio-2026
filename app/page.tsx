@@ -45,7 +45,7 @@ export default function HomePage() {
           <div className="mb-2">
             <Avatar className="w-15 h-15">
               <AvatarImage src="/picolo.webp" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>VK</AvatarFallback>
             </Avatar>
           </div>
           <div className="text-sm text-gray-500 flex items-center gap-4 max-w-4xl">
