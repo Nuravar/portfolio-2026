@@ -115,15 +115,14 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
   projects = [], 
   fullWidthCount = 0 
 }) => {
-  // Sample data
   const sampleProjects: Project[] = [
     {
       id: '1',
       title: 'Dana Incorporated',
-      subtitle: 'R&D',
+      subtitle: 'Automotive R&D',
       description: 'Designing and prototyping battery cooling systems for electric vehicles.',
       date: '2025-08-15',
-      video: '/videos/dana-demo.mp4', // Using video
+      video: '/videos/dana-demo.mp4', 
       videoZoom: 1.15,
       link: '/dana'
     },
@@ -140,7 +139,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
       id: '2',
       title: 'Formula Student',
       subtitle: 'Electric Racecar',
-      description: 'Developed HIL software with McMaster’s Formula Student team.',
+      description: 'Developed HIL software with McMaster’s Formula Student team to test and validate the electrical systems of the racecar.',
       date: '2024-02-28',
       photo: '/images/formula.jpg',
       isExternal: true,

@@ -5,12 +5,10 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { AppSidebar } from "@/components/app-sidebar";
 import { Home, Calendar} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle,  } from "lucide-react";
 import Footer from '@/components/footer';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image";
 import {
   Carousel,
@@ -183,151 +181,80 @@ export default function BlogCaseStudyPage() {
               <section className="space-y-4">
                 <h2 className="text-3xl font-bold text-white">Introduction</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                    What is an automotive heat exchanger, what are the types
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Brazing as the key technology and why it is important for heat exchangers
+                </p>
+                <h3 className="text-xl font-semibold text-white">Key Achievements</h3>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Summary of resume bullet points
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  [diagram of the time I spent at DANA, 8 months at BC, 8 months at MJTR]
                 </p>
               </section>
               
+              {/* BC Section */}
               <section className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Cooling Efficiency</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+25%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Improvement over baseline</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Battery Life</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">+18%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Extended operational life</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-center">Energy Consumption</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center text-center">
-                      <div className="text-5xl font-extrabold">-12%</div>
-                      <p className="text-xs text-muted-foreground mt-1">Reduced cooling energy</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </section>
-
-
-              <AspectRatio ratio={16 / 9}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="https://cdn.motor1.com/images/mgl/BXxr9A/s3/il-prototipo-camuffato-della-nuova-jaguar-elettrica-2024.jpg"
-                  alt="Image"
-                  unoptimized
-                  className="rounded-md object-cover"
-                  fill
-                />
-              </div>
-            </AspectRatio>
-
-            <section className="space-y-4">
-                <h2 className="text-3xl font-bold text-white">Challenges</h2>
+                <h2 className="text-3xl font-bold text-white">Product Engineering Internship</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                  Detail your responsibilities: QA testing (hipot, leak, GD&T), designing/fabricating test fixtures (mention PTC Creo), and testing JLR battery cold plates.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Discuss your research into process improvements, especially the glueing-after-brazing method versus brazing everything together.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Mention prototype process investigations (sectioning, hipot testing) for potential quality/cost benefits.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Highlight teamwork with manufacturing and QA teams.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Explain your Python automation scripts to reduce manual workload (specify GD&T dimensional tracking and shipping list automation).                
                 </p>
               </section>
 
-              <div className="flex gap-4">
-                <AspectRatio ratio={4 / 3} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://i.guim.co.uk/img/media/0e123a1c4f010f2868c2357da8df3f0cd5dc5393/0_72_2161_1297/master/2161.jpg?width=465&dpr=1&s=none&crop=none"
-                      alt="Jaguar"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-
-                <AspectRatio ratio={16 / 9} className="">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="https://media.wired.com/photos/674874547f9330001e85096a/3:2/w_2560%2Cc_limit/JagTopArt2.jpg"
-                      alt="Another Car"
-                      unoptimized
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                </AspectRatio>
-              </div>
-
-            <section className="space-y-4">
+              {/* MJTR Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Material Engineering Internship</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  As the automotive industry rapidly transitions toward electrification, thermal management has emerged as one of the most critical challenges in electric vehicle development. At Dana Incorporated, I led a comprehensive research initiative focused on developing next-generation thermal management solutions for electric vehicle battery systems.
+                  Describe your role testing 1000+ aluminum and copper alloy samples for properties like tensile strength, corrosion resistance, thermal conductivity.                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Explain how you studied brazing quality factors and contributed to process improvements (alloy replacements, downgauging).                
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Over the course of 15 months, our team worked to address the fundamental challenge of maintaining optimal battery temperatures while maximizing energy efficiency and extending battery life. This project resulted in breakthrough innovations that improved cooling efficiency by 25% and significantly enhanced overall vehicle performance.
+                  Detail your work with Digital Image Correlation (DIC) technology and creation of Python-based material property databases.                
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Discuss your role in global Dana cost reduction initiatives tied to material research. 
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Explain your Python automation scripts to reduce manual workload (specify GD&T dimensional tracking and shipping list automation).                
                 </p>
               </section>
 
-            <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 10000,
-              //   }),
-              // ]}
-            className="p-1">
-              <CarouselContent>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://skinnonews.com/global/wp-content/uploads/sites/2/2022/07/1180px_3.jpg"
-                      alt="Slide 2"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://media.wired.com/photos/655692cf7a953ed215c7b1d8/master/pass/Ford-F-150-Lightning-Featured-Gear.jpg"
-                      alt="Slide 1"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
+              {/* MJTR Section */}
+              <section className="space-y-4">
+                <h2 className="text-3xl font-bold text-white">Personal Initiative</h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Focus on your self-started Python automation projects across both roles.         
+                </p>       
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Explain how you studied brazing quality factors and contributed to process improvements (alloy replacements, downgauging).                
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Detail your work with Digital Image Correlation (DIC) technology and creation of Python-based material property databases.                
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Discuss your role in global Dana cost reduction initiatives tied to material research. 
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Explain your Python automation scripts to reduce manual workload (specify GD&T dimensional tracking and shipping list automation).                
+                </p>
+              </section>
 
-                <CarouselItem>
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      src="https://images.mktw.net/im-47931009?width=1260&height=840"
-                      alt="Slide 3"
-                      fill
-                      className="object-cover rounded-md"
-                      unoptimized
-                    />
-                  </AspectRatio>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+
 
 
 

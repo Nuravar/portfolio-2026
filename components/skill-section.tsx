@@ -91,7 +91,7 @@ const SkillsSection: React.FC = () => {
         mounted && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
       }`}
       style={{
-        backgroundColor: '#1F1818',
+        backgroundColor: '#1d1b19',
         transitionDelay: mounted ? `${index * 50}ms` : '0ms'
       }}
     >
@@ -120,7 +120,7 @@ const SkillsSection: React.FC = () => {
 
     return (
       <div className="w-full">
-        <h2 className="mb-4 text-left transition-colors text-muted-foreground">{title}</h2>
+        <h2 className="mb-4 text-left text-white font-medium text-sm">{title}</h2>
         <div className="space-y-2">
           {displayedSkills.map((skill: Skill, index: number) => (
             <SkillItem key={skill.name} skill={skill} index={index} isVisible={true} />
