@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/16ff0f1b-bf15-4c0f-aafc-49befaea4a89/deploy-status)](https://app.netlify.com/projects/varunkothandaraman/deploys)
 
-# [varunram.ca](varunram.ca)
+# [varunram.ca](https://varunram.ca)
 
 A modern, responsive portfolio website built with Next.js, styled with shadcn/ui components, and deployed on Netlify. The entire website is a work-in-progress and is to be updates as I gain new experiences and projects. 
 
@@ -19,4 +19,4 @@ A modern, responsive portfolio website built with Next.js, styled with shadcn/ui
 
 
 ## Credits: 
-A lot of the inspiration and design behind this portfolio sites was based on [ggkim's](ggkim.com) design portfolio website alongside a variety of other portfolio sites I've seen throughout the web. 
+A lot of the inspiration and design behind this portfolio sites was based on [ggkim's](https://ggkim.com/) design portfolio website alongside a variety of other portfolio sites I've seen throughout the web. 
