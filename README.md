@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/16ff0f1b-bf15-4c0f-aafc-49befaea4a89/deploy-status)](https://app.netlify.com/projects/varunkothandaraman/deploys)
 
-# Portfolio Website
+# [varunram.ca](varunram.ca)
 
 A modern, responsive portfolio website built with Next.js, styled with shadcn/ui components, and deployed on Netlify. The entire website is a work-in-progress and is to be updates as I gain new experiences and projects. 
 
