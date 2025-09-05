@@ -17,7 +17,6 @@ import GravityGrid from "@/components/ui/gravity-grid";
 import LocationAndTimeDisplay from "@/components/location-indicator";
 import ResumeEmailButtons from "@/components/resume-email-btn";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 export default function HomePage() {
 
   return (

@@ -16,8 +16,7 @@ export function Timeline() {
     d.setMonth(d.getMonth() + 1);
   }
 
-  const firstHalfCount = 8;
-  const totalCount = 16;
+
 
   return (
     <div className="w-full max-w-4xl mx-auto">
