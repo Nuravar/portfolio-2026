@@ -110,7 +110,7 @@ const SkillsSection: React.FC = () => {
           </span>
         </div>
       )}
-      <span className="text-white transition-colors duration-200 hover:text-gray-300">{skill.name}</span>
+      <span className="text-muted-foreground transition-colors duration-200 hover:text-gray-300">{skill.name}</span>
     </div>
   );
 
@@ -120,7 +120,7 @@ const SkillsSection: React.FC = () => {
 
     return (
       <div className="w-full">
-        <h2 className="mb-4 text-left text-white font-medium text-sm">{title}</h2>
+        <h3 className="text-left text-white font-medium text-xs m-2">{title}</h3>
         <div className="space-y-2">
           {displayedSkills.map((skill: Skill, index: number) => (
             <SkillItem key={skill.name} skill={skill} index={index} isVisible={true} />
@@ -153,8 +153,7 @@ const SkillsSection: React.FC = () => {
 
   return (
     <div className="hidden lg:block w-full py-8">
-      <div className="mb-8">
-      </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
         <SkillColumn

@@ -80,10 +80,10 @@ const TeamExperience = () => {
 ];
 
   return (
-    <div className="text-white rounded-lg py-8">
+    <div className="text-white rounded-lg pt-8">
       <Accordion type="single" collapsible className="w-full">
         {experiences.map((exp) => (
-          <AccordionItem key={exp.id} value={`item-${exp.id}`} className="border-gray-800">
+          <AccordionItem key={exp.id} value={`item-${exp.id}`} className="border-[#584B50]">
             <AccordionTrigger className="hover:no-underline py-3">
               <div className="flex items-center justify-between w-full">
                 <div className="flex items-center space-x-2">
@@ -100,20 +100,20 @@ const TeamExperience = () => {
 
                   {/* Company Details */}
                   <div className="flex flex-row gap-3 items-baseline">
-                    <span className="text-white font-medium text-sm">
+                    <span className="text-white font-normal leading-relaxed text-sm">
                       {exp.company} 
                     </span>
-                    <span className="text-gray-400 text-xs font-normal">
+                    <span className="text-gray-400 text-xs font-normal leading-relaxed ">
                       /
                     </span>
-                    <span className="text-gray-400 text-xs font-normal">
+                    <span className="text-gray-400 text-xs font-normal leading-relaxed ">
                       {exp.role}
                     </span>
                   </div>
                 </div>
 
                 {/* Year */}
-                <div className="text-muted-foreground text-xs font-small mr-4">
+                <div className="text-muted-foreground text-xs font-small leading-relaxed mr-4">
                   {exp.year}
                 </div>
               </div>

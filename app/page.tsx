@@ -43,26 +43,24 @@ export default function HomePage() {
         {/* Main Content */}
         <div className="px-4 py-8 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-8">
           <div className="mb-2">
-            <Avatar className="w-15 h-15">
-              <AvatarImage src="/picolo.webp" alt="@shadcn" />
+            {/* <Avatar className="w-15 h-15">
+              <AvatarImage src="/linkedin.jpg" alt="@shadcn" />
               <AvatarFallback>VK</AvatarFallback>
-            </Avatar>
+            </Avatar> */}
           </div>
-          <div className="text-sm text-gray-500 flex items-center gap-4 max-w-4xl">
+          <div className="text-sm text-muted-foreground flex items-center gap-4 max-w-4xl">
             <LocationAndTimeDisplay />
           </div>
 
           <div className="space-y-4 max-w-7xl">
-            <h1 className="text-lg text-gray-300 leading-relaxed max-w-4xl">
+            <h3 className="max-w-4xl">
               👋 Hi, I'm Varun. I'm a designer, mechanical engineer, and obsessed with building things that move. I previously worked as an R&D engineering intern at <Link href="https://www.dana.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Dana</Link>, designing and prototyping electric vehicle thermal systems, with roles spanning both mechanical and materials engineering. <br/><br/>
-
               Before Dana, I joined two student-run teams at McMaster: <Link href="https://macformularacing.com/" prefetch={false} className="underline hover:text-white duration-200 ease-in">Formula Student</Link> and <Link href="https://mcmaster.ca/solarcar" prefetch={false} className="underline hover:text-white duration-200 ease-in">Solar Car Racing</Link>. At Formula, I worked on a hardware-in-the-loop testing platform, and at Solar Car, I helped manufacture the vehicle. <br/><br/>
+              Studying Mechatronics and Biomedical Engineering at McMaster University. For the past three years, I've also been a teaching assistant for engineering courses focused on building electromechanical projects. 
+            </h3>
 
-              Currently studying Mechatronics and Biomedical Engineering at McMaster University. For the past three years, I've also been a teaching assistant for engineering courses focused on building electromechanical projects. 
-            </h1>
-
-            <div className="pt-2">
-              <small className="flex items-center gap-2 text-gray-300">
+            <div>
+              <div className=" text-sm flex items-center gap-2">
                 <div className="relative">
                   <div
                     className="w-2 h-2 rounded-full bg-green-400 animate-pulse"
@@ -72,10 +70,8 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-400 animate-ping opacity-20" />
                 </div>
-                <span>
-                  Currently seeking <strong>Summer 2026 Engineering Internships</strong>
-                </span>
-              </small>
+                  Currently seeking <strong> Summer 2026 Engineering Internships</strong>
+              </div>
             </div>
 
             <ResumeEmailButtons />

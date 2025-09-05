@@ -89,7 +89,7 @@ export default function BlogCaseStudyPage() {
               {/* Left Column - Title and Description */}
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h1 className="text-5xl lg:text-6xl font-bold tracking-tight">
+                  <h1 className="blog-title">
                     McMaster Engineering
                   </h1>
                 </div>

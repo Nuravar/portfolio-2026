@@ -89,6 +89,7 @@
 
 
 
+
 .dark {
   /* Main background - soft warm gray instead of harsh black */
   --background: oklch(0.18 0.005 30);
@@ -144,6 +145,70 @@
   --sidebar-border: oklch(0.32 0.02 45);
   --sidebar-ring: oklch(0.60 0.08 280);
 }
+
+h1 {
+  font-size: 1.75rem; /* ~28px */
+  line-height: 1.75;  /* relaxed */
+  color: #d1d5db;     /* subtle gray */
+  font-weight: 600;   /* minimal bold */
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;  /* ~24px */
+  line-height: 1.75;  /* relaxed */
+  color: #d1d5db;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+h3 {
+  font-size: 1rem; /* ~20px */
+  line-height: 1.75;  /* relaxed */
+  color: #d1d5db;
+  font-weight: 400;
+  margin-top: 1rem;
+  padding-top: 0.25rem;
+}
+
+p {
+  font-size: 0.925rem;    /* 16px standard body */
+  line-height: 1.75;  /* relaxed for readability */
+  color: #d1d5db;
+  font-weight: 400;   /* no extra bold */
+  margin-top: 0.75rem;
+}
+
+
+
+
+.blog-title {
+  font-size: 3rem;        /* text-5xl */
+  line-height: 1;
+  font-weight: 700;       /* font-bold */
+  letter-spacing: -0.01562em; /* tracking-tight */
+}
+
+@media (min-width: 1024px) {
+  .blog-title {
+    font-size: 3.75rem;   /* lg:text-6xl */
+    line-height: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

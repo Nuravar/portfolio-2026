@@ -84,12 +84,12 @@ const ProjectCard: React.FC<{
         <div className="flex justify-between items-start">
           {/* Title & Subtitle */}
           <div className="flex-none mr-4">
-            <h3 className="text-base font-semibold mb-0">
+            <div>
               {project.title}
-            </h3>
-            <p className="text-base text-muted-foreground mt-0">
+            </div>
+            <div className="text-base text-muted-foreground mt-0">
               {project.subtitle}
-            </p>
+            </div>
           </div>
 
           {/* Description - Hidden on mobile */}
@@ -101,9 +101,9 @@ const ProjectCard: React.FC<{
 
           {/* Date */}
           <div className="flex-none">
-            <p className="text-base">
+            <div className="text-base">
               {new Date(project.date).getFullYear()}
-            </p>
+            </div>
           </div>
         </div>
       </div>

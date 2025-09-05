@@ -74,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({
       >
         <div className="px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
           <div className="text-left space-y-4 text-muted-foreground">
-            <h1 className="text-sm "><strong>I’m actively seeking mechanical or hardware engineering internship opportunities.</strong><br/> If you know of any openings, have questions, or just want to connect, feel free to reach out to me on <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
+            <p className="text-sm"><strong>I’m actively seeking mechanical or hardware engineering internship opportunities.</strong><br/> If you know of any openings, have questions, or just want to connect, feel free to reach out to me on <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 underline" >
                 LinkedIn
               </a>{' '}
               or by{' '}
@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({
               >
                 email
               </a>
-              .</h1>
+              .</p>
 
           </div>
         </div>

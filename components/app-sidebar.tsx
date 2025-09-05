@@ -147,8 +147,8 @@ export function AppSidebar() {
                   className="transform transition-all duration-200 ease-out hover:translate-x-1"
                 >
                   <SidebarMenuButton asChild className="h-8 px-3 text-sm font-normal hover:bg-white/5 text-white/70 hover:text-white transition-all duration-200 ease-out hover:shadow-sm">
-                    <a href={item.href} className="flex items-center gap-2 w-full">
-                      <div className="relative flex items-center justify-center w-3.5 h-3.5">
+                    <a href={item.href} className="flex items-center gap-2 w-full"  target="_blank" >
+                      <div className="relative flex items-center justify-center w-3.5 h-3.5" rel="noopener noreferrer">
                         <div className={`absolute inset-0 transition-all duration-200 ease-out ${hoveredItemId === item.id ? 'scale-110 opacity-100' : 'scale-100 opacity-100'}`}>
                           {hoveredItemId === item.id ? (
                             <ChevronRight className="w-3 h-3 text-blue-400" strokeWidth={1.5} />
@@ -169,11 +169,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t border-border/20" style={{ backgroundColor: '#221D1B' }}>
-<div className="p-3">
-  <p className="text-xs font-light text-white/40">
-    © Varun Ram, 2025 | <kbd className="bg-white/10 text-white/60 px-1.5 py-0.5 rounded border border-white/20 text-[10px]">Ctrl + B</kbd> 
-  </p>
-</div>
+
       </SidebarFooter>
     </Sidebar>
   );
