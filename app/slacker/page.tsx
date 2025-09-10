@@ -405,10 +405,10 @@ export default function BlogCaseStudyPage() {
                   screen. By prioritizing mobile-first design, we ensured
                   responsiveness and clarity from the start.
                 </p>
-                <Carousel className="p-1">
+                <Carousel className="m-10 lg:m-2 lg:p-1">
                   <CarouselContent>
                     <CarouselItem className="basis-1/2">
-                      <div className="h-[700px] flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-home.png"
                           alt="Slide 1"
@@ -420,7 +420,7 @@ export default function BlogCaseStudyPage() {
                       </div>
                     </CarouselItem>
                     <CarouselItem className="basis-1/2">
-                      <div className="h-[700px] flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-list.png"
                           alt="Slide 2"
@@ -432,7 +432,7 @@ export default function BlogCaseStudyPage() {
                       </div>
                     </CarouselItem>
                     <CarouselItem className="basis-1/2">
-                      <div className="h-[700px] flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-group.png"
                           alt="Slide 3"
@@ -444,7 +444,7 @@ export default function BlogCaseStudyPage() {
                       </div>
                     </CarouselItem>
                     <CarouselItem className="basis-1/2">
-                      <div className="h-[700px] flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-settings.png"
                           alt="Slide 3"
@@ -475,10 +475,10 @@ export default function BlogCaseStudyPage() {
                   to redo the page, I would definitely change up the layout and
                   make it simpler to understand.
                 </p>
-                <Carousel className="p-1">
+                <Carousel className="m-10 lg:m-2 lg:p-1">
                   <CarouselContent>
                     <CarouselItem className="">
-                      <div className=" flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-home-light.png"
                           alt="Slide 2"
@@ -490,7 +490,7 @@ export default function BlogCaseStudyPage() {
                       </div>
                     </CarouselItem>
                     <CarouselItem className="">
-                      <div className="flex items-center justify-center">
+                      <div className="h-[200px] lg:h-[400px] flex items-center justify-center">
                         <Image
                           src="/slacker/slacker-home-dark.png"
                           alt="Slide 3"

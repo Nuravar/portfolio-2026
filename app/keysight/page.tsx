@@ -356,7 +356,7 @@ export default function BlogCaseStudyPage() {
                 </p>
 
                 <div className="pt-4">
-                  <Carousel className="p-1">
+                  <Carousel className="m-10 lg:m-2 lg:p-1">
                     <CarouselContent>
                       <CarouselItem>
                         <div className="flex items-center justify-center h-[200px] lg:h-[400px]">

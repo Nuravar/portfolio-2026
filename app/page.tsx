@@ -54,7 +54,7 @@ export default function HomePage() {
           <div className="space-y-4 max-w-7xl">
             <h3 className="max-w-4xl !font-normal">
               👋 Hi, I'm Varun. I'm a designer, mechanical engineer, and
-              obsessed with building things that move. I previously worked as an
+              obsessed with building things that move. I previously worked as a
               R&D engineering intern at{" "}
               <Link
                 href="https://www.dana.com/"

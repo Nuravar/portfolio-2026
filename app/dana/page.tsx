@@ -263,9 +263,10 @@ export default function BlogCaseStudyPage() {
                 {/* Timeline Visual */}
 
                 <section className="space-y-6">
-                  <h2>Internship Overview</h2>
+                  
 
-                  <div className="hidden md:block">
+                  <div className="space-y-6 hidden md:block">
+                    <h2>Internship Overview</h2>
                     <Timeline />
                   </div>
                   <h1>Thermal Management in Electric Vehicles</h1>
@@ -340,13 +341,13 @@ export default function BlogCaseStudyPage() {
                     The Brazing Process: Creating Efficient Thermal Solutions
                   </h2>
                   <p>
-                    Brazing is a sophisticated joining process that forms
+                    Brazing is a joining process that forms
                     strong, leak-tight joints between metal components by
                     melting a filler metal (brazing alloy) that flows into the
                     joint through capillary action. Unlike welding, brazing
                     doesn't melt the base metals but creates a metallurgical
                     bond at temperatures typically above 450°C (840°F). This
-                    process is essential for creating the complex internal
+                    is one of many processes that allow for the creation of complex internal
                     cooling channels required for effective battery thermal
                     management.
                   </p>
@@ -370,66 +371,6 @@ export default function BlogCaseStudyPage() {
                         Automotive Heat Exchangers, Benoit et. al.
                       </a>
                     </p>
-                  </div>
-                  <h2>Formed Plate Technology</h2>
-                  <p>
-                    Dana employs an advanced formed plate approach to create
-                    sophisticated internal geometries for their thermal
-                    management solutions:
-                  </p>
-                  <ol className="custom-ol">
-                    <li className="custom-li">
-                      Thin aluminum plates are precision-stamped using custom
-                      tooling to create specific patterns and channel designs
-                      optimized for heat transfer
-                    </li>
-                    <li className="custom-li">
-                      These formed plates are then carefully stacked in layers
-                      to create complex three-dimensional internal fluid
-                      pathways
-                    </li>
-                    <li className="custom-li">
-                      The design allows for optimized coolant flow that
-                      maximizes heat transfer from batteries to the cooling
-                      medium while minimizing pressure drop
-                    </li>
-                    <li className="custom-li">
-                      This approach enables the creation of customized cooling
-                      solutions that conform to the unique packaging constraints
-                      of different EV battery designs and vehicle architectures
-                    </li>
-                  </ol>
-                  <div className="flex justify-center pt-4">
-                    <Image
-                      src="/dana/3-formedplate.png"
-                      height={800}
-                      width={800}
-                      alt=""
-                      unoptimized
-                      className="object-cover shadow-lg rounded-lg"
-                    />
-                  </div>
-                  <h2>Multilayered Alloys</h2>
-                  <p>
-                    Dana's manufacturing process leverages multilayered aluminum
-                    materials with precisely formulated brazing alloy cladding.
-                    These materials combine a strong core structure with
-                    lower-melting-point outer layers that, during controlled
-                    heating, selectively melt to form metallurgically sound
-                    bonds without compromising the base material. The result is
-                    a unified structure offering superior thermal conductivity,
-                    mechanical strength, and leak-tight performance essential
-                    for EV cooling applications.
-                  </p>
-                  <div className="flex justify-center pt-4">
-                    <Image
-                      src="/dana/rolling.png"
-                      height={400}
-                      width={400}
-                      alt=""
-                      unoptimized
-                      className="object-cover shadow-lg rounded-lg"
-                    />
                   </div>
                   <h1>Phase 1: Product Development (8 months)</h1>
                   <p>
@@ -585,9 +526,9 @@ export default function BlogCaseStudyPage() {
                   </h3>
                   <div className="flex justify-center pt-4">
                     <Image
-                      src="/dana/furnace.png"
-                      height={600}
-                      width={600}
+                      src="/dana/ford.avif"
+                      height={800}
+                      width={800}
                       alt=""
                       unoptimized
                       className="object-cover shadow-lg rounded-lg"

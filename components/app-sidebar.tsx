@@ -43,6 +43,7 @@ const navigationItems = [
 ];
 
 const projectItems = [
+ 
   { id: "heatsink", name: "Heatsink Design", href: "/heatsink", icon: File },
   {
     id: "slacker-chores",
@@ -50,6 +51,7 @@ const projectItems = [
     href: "/slacker",
     icon: File,
   },
+  { id: "keysight", name: "Keysight", href: "/keysight", icon: File },
   { id: "pace", name: "Pace++", href: "/paceplusplus", icon: File },
 ];
 

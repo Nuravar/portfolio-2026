@@ -393,7 +393,7 @@ export default function BlogCaseStudyPage() {
                 <h2 className="text-3xl font-bold text-white">Project Gallery</h2>
                 
                 {/* Main prototype images carousel */}
-                <Carousel className="p-1">
+                <Carousel className="m-10 lg:m-2 lg:p-1">
                   <CarouselContent>
                     <CarouselItem>
                       <div className="bg-indigo-600/20 border border-indigo-500 rounded-lg p-8 text-center h-64 flex flex-col justify-center">
