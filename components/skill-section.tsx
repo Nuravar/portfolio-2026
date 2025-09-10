@@ -110,7 +110,7 @@ const SkillsSection: React.FC = () => {
           </span>
         </div>
       )}
-      <span className="text-muted-foreground transition-colors duration-200 hover:text-gray-300">{skill.name}</span>
+      <span className="text-muted-foreground text-sm transition-colors duration-200 hover:text-gray-300">{skill.name}</span>
     </div>
   );
 

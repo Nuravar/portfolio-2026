@@ -168,7 +168,7 @@ h3 {
   font-size: 1rem; /* ~20px */
   line-height: 1.75;  /* relaxed */
   color: #d1d5db;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 1rem;
   padding-top: 0.25rem;
 }
@@ -181,6 +181,62 @@ p {
   margin-top: 0.75rem;
 }
 
+
+.custom-ul {
+  list-style: none;
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+
+.custom-ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin: 0.4rem 0;
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.custom-ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #8e8e93;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Ordered lists */
+.custom-ol {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+  counter-reset: list-counter;
+}
+
+.custom-ol li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin: 0.4rem 0;
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+  counter-increment: list-counter;
+}
+
+.custom-ol li::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #8e8e93;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
 
 
 
