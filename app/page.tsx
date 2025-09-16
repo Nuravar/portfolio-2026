@@ -53,49 +53,43 @@ export default function HomePage() {
 
           <div className="space-y-4 max-w-7xl">
             <h3 className="max-w-4xl !font-normal">
-              👋 Hi, I'm Varun. I'm a designer, mechanical engineer, and
-              obsessed with building things that move. I previously worked as a
-              R&D engineering intern at{" "}
-              <Link
-                href="https://www.dana.com/"
-                prefetch={false}
-                className="underline hover:text-white duration-200 ease-in"
-                target="_blank"
-  rel="noopener noreferrer"
-              >
-                Dana
-              </Link>
-              , designing and prototyping electric vehicle thermal systems, with
-              roles spanning both mechanical and materials engineering. <br />
-              <br />
-              Before Dana, I joined two student-run teams at McMaster:{" "}
-              <Link
-                href="https://macformularacing.com/"
-                prefetch={false}
-                className="underline hover:text-white duration-200 ease-in"
-                target="_blank"
-  rel="noopener noreferrer"
-              >
-                Formula Student
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="https://mcmaster.ca/solarcar"
-                prefetch={false}
-                className="underline hover:text-white duration-200 ease-in"
-                target="_blank"
-  rel="noopener noreferrer"
-              >
-                Solar Car Racing
-              </Link>
-              . At Formula, I worked on a hardware-in-the-loop testing platform,
-              and at Solar Car, I helped manufacture the vehicle. <br />
-              <br />
-              Studying Mechatronics and Biomedical Engineering at McMaster
-              University. For the past three years, I've also been a teaching
-              assistant for engineering courses focused on building
-              electromechanical projects.
-            </h3>
+  👋 Hi, I'm Varun. I’m a designer and mechanical engineer obsessed with building things that move.
+
+  I previously worked as an R&D engineering intern at{" "}
+  <Link
+    href="https://www.dana.com/"
+    prefetch={false}
+    className="underline hover:text-white duration-200 ease-in"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Dana
+  </Link>
+  , where I designed and prototyped thermal systems for electric vehicles. My experience also includes working on student design teams for{" "}
+  <Link
+    href="https://macformularacing.com/"
+    prefetch={false}
+    className="underline hover:text-white duration-200 ease-in"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Formula Student
+  </Link>{" "}
+  and{" "}
+  <Link
+    href="https://mcmaster.ca/solarcar"
+    prefetch={false}
+    className="underline hover:text-white duration-200 ease-in"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Solar Car Racing 
+  </Link>{" "}
+  at McMaster University.
+  <br />
+  <br />
+  I'm currently studying Mechatronics and Biomedical Engineering at McMaster, and I’ve spent the last three years as a teaching assistant for engineering courses focused on building electromechanical projects.
+</h3>
 
             <div>
               <div className=" text-sm flex items-center gap-2">
