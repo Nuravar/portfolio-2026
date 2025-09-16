@@ -8,7 +8,7 @@ const TeamExperience = () => {
       id: 5,
       company: 'McMaster University',
       role: 'Engineering Teaching Assistant',
-      year: 'Jan 2023 - ░░▒▒░▒',
+      year: 'Jan 2023 - Present',
       logoSrc: "/companyLogos/McMasterEngLogo.png",
       logoAlt: "McMaster Logo",
       bgColor: 'bg-white',
