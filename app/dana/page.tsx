@@ -28,13 +28,13 @@ import { ExternalLinkCard } from "@/components/link-preview";
 import Link from "next/link";
 export default function BlogCaseStudyPage() {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <AppSidebar />
       <main className="flex-1">
         {/* Top header with breadcrumb and mobile sidebar trigger */}
         <div className="flex h-16 shrink-0 items-center justify-between px-4 lg:px-6 relative z-20">
           {/* Breadcrumb */}
-          <Breadcrumb>
+          <Breadcrumb >
             <BreadcrumbList>
               <BreadcrumbItem>
                 <Home className="ml-auto w-3 h-3" />

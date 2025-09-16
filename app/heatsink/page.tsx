@@ -10,7 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { AppSidebar } from "@/components/app-sidebar";
-import { Home, Calendar } from "lucide-react";
+import { Home } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Footer from "@/components/footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -32,7 +32,7 @@ import {
 
 export default function BlogCaseStudyPage() {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <AppSidebar />
       <main className="flex-1">
         {/* Top header with breadcrumb and mobile sidebar trigger */}
@@ -105,7 +105,6 @@ export default function BlogCaseStudyPage() {
                 {/* Meta Information */}
                 <div className="flex flex-wrap items-center gap-6 text-{#E3DEE0}">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5" />
                     <span>Sep 2024</span>
                   </div>
                 </div>

@@ -19,8 +19,8 @@ import ResumeEmailButtons from "@/components/resume-email-btn";
 import Link from "next/link";
 export default function HomePage() {
   return (
-    <SidebarProvider>
-      <AppSidebar />
+    <SidebarProvider defaultOpen={false}>
+      <AppSidebar  />
       <main className="flex-1 ">
         {" "}
         {/* Added dotted background class: dotted-paper-bg-subtle*/}
@@ -36,7 +36,7 @@ export default function HomePage() {
           </Breadcrumb>
 
           <div className="lg:hidden">
-            <SidebarTrigger />
+            <SidebarTrigger/>
           </div>
         </div>
         {/* Main Content */}

@@ -3,7 +3,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { AppSidebar } from "@/components/app-sidebar";
-import { Home, Calendar} from "lucide-react";
+import { Home} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from '@/components/footer';
@@ -28,7 +28,7 @@ import {
 
 export default function BlogCaseStudyPage() {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <AppSidebar />
       <main className="flex-1">
         {/* Top header with breadcrumb and mobile sidebar trigger */}
@@ -96,7 +96,6 @@ export default function BlogCaseStudyPage() {
                 {/* Meta Information */}
                 <div className="flex flex-wrap items-center gap-6 text-{#E3DEE0}">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5" />
                     <span>May 2024 - August 2025</span>
                   </div>
                 </div>
