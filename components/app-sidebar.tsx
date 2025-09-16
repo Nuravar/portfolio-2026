@@ -65,7 +65,7 @@ const socialItems = [
   {
     id: "resume-link",
     name: "Resume",
-    href: "https://drive.google.com/file/d/17IM2GrhMg9kURvisMCVKyW9lMpiyQfuI/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1G_v3SECTlFTvtg4_NcpHsgBaOZ-Bazqx/view?usp=sharing",
     icon: Paperclip,
   },
   {
