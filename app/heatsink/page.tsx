@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import Footer from "@/components/footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
-import DarkVeil from "@/components/ui/dark-veil";
+import PixelBlast from "@/components/ui/pixelblast";
 import {
   Tooltip,
   TooltipContent,
@@ -79,7 +79,20 @@ export default function BlogCaseStudyPage() {
                 <source src="https://videos.pexels.com/video-files/2435376/2435376-uhd_2560_1440_30fps.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video> */}
-              <DarkVeil hueShift={245} />
+              <PixelBlast
+                variant="circle"
+                pixelSize={11}
+                color="#EC0B43"
+                patternScale={4}
+                patternDensity={1.4}
+                pixelSizeJitter={0.5}
+                rippleSpeed={0.4}
+                rippleThickness={0.12}
+                rippleIntensityScale={1.5}
+                speed={0.3}
+                edgeFade={0.25}
+                transparent
+              />
               {/* Optional Overlay for readability */}
               <div className="absolute inset-0 bg-black/40"></div>
             </div>
