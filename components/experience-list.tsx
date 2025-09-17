@@ -88,13 +88,13 @@ const TeamExperience = () => {
               <div className="flex items-center justify-between w-full">
                 <div className="flex items-center space-x-2">
                   {/* Company Logo */}
-                  <div className={`w-7 h-7 rounded-sm flex items-center justify-center overflow-hidden ${exp.bgColor}`}>
+                  <div className={`w-7 h-7 rounded-sm flex items-center justify-center overflow-hidden  hidden md:flex ${exp.bgColor}`}>
                     <Image 
                       src={exp.logoSrc} 
                       alt={exp.logoAlt}
                       width={28}
                       height={28}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain "
                     />
                   </div>
 
@@ -113,7 +113,7 @@ const TeamExperience = () => {
                 </div>
 
                 {/* Year */}
-                <div className="text-muted-foreground text-xs font-small leading-relaxed mr-4">
+                <div className="text-muted-foreground text-xs font-small leading-relaxed mr-4  hidden md:flex">
                   {exp.year}
                 </div>
               </div>

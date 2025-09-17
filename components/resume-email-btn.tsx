@@ -28,7 +28,7 @@ export default function ResumeEmailButtons() {
       <Button 
         variant="outline" 
         size="sm" 
-        className="flex items-center gap-2"
+        className="flex items-center gap-2 "
         onClick={() => window.open('https://www.linkedin.com/in/varun-ram/', '_blank')}
       >
         <Linkedin className="h-4 w-4" />
@@ -38,7 +38,7 @@ export default function ResumeEmailButtons() {
       <Button 
         variant="outline" 
         size="sm" 
-        className="flex items-center gap-2"
+        className="flex items-center gap-2 hidden md:flex"
         onClick={() => window.open('https://github.com/Nuravar', '_blank')}
       >
         <Github className="h-4 w-4" />
