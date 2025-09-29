@@ -183,7 +183,7 @@ export default function BlogCaseStudyPage() {
                 </div>
                 <ExternalLinkCard
                   title="Dana Inc."
-                  description="Check out the companies website!"
+                  description="Check out the company website!"
                   url="https://dana.com"
                 />
               </div>
